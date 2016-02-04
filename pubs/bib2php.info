@@ -1,0 +1,106 @@
+## This info file describes the files for the dynamic publication
+## pages at lcv.
+
+Top directory
++ publications.php - This is the file that generates the publications page.
+  It does this based on the user's radio button and check box selections.  It 
+  creates the links at the top of the page based on the sort method and then 
+  includes the appropriate page from pubs/CACHE.
+
+Subdirectory (hardcoded as pubs/)
++ authorURL.txt - File that contains the mapping from author names to URLs.
++ bib2php.conf - configuration file that defines the following variables:
+  BIBTEX - The name of the bibtex file to use.
+  AUX - The name of the auxiliary file to use.
+  ABSTRACT - Directory that contains the publication abstracts.
+  AUTHOR - File that contains the mapping from author names to URLs.
+  JOURNAL - File that contains the mapping from journal names to URLs.
+  BASE1 - The base URL that the publications will be located at.
+  BASE2 - The base path for the publications.
+  The variables BIBTEX, AUX, ABSTRACT, AUTHOR, and JOURNAL are assumed to be 
+  in the subdirectory pub/.
++ bib2php-sty.php - File used to store style related variables. Currently only 
+  holds variables for the color of the separator bars and the color of the 
+  text on those bars.
++ freshenPubs.php - PHP script that updates cached versions of publication 
+  pages stored in pubs/CACHE.
++ journal.txt - File that contains the mapping from journal names to URLs.
++ lcvheader_dynamic.html - Code used to create the LCV header with selection 
+  boxes.
++ makeAbs.php - This file generates the abstract pages dynamically.
++ simoncelli.aux - auxiliary file.  More information on the format of the 
+  auxiliary file can be found in aux-documentation.txt.
++ simoncelli.bib - bibtex file
++ URLchecker_nopass.php - php script that checks for broken links in the 
+  publications page and each of the abstract pages.  The page publications.php 
+  contains code at the bottom that can be uncommented to reveal a button that 
+  triggers this script.
++ bib2php.log - Log file that stores the number of times each combination of 
+  of sort method and exclusion check boxes is selected.  The file contains a 
+  raw list of numbers.  The table below tells the mapping of index to included 
+  page:
+  1 - publications_topic_noconf_noabs_nobct_nosuper.php
+  2 - publications_topic_noconf_noabs_nobct.php
+  3 - publications_topic_noabs_nobct_nosuper.php
+  4 - publications_topic_noconf_nobct_nosuper.php
+  5 - publications_topic_noconf_noabs_nosuper.php
+  6 - publications_topic_noconf_nosuper.php
+  7 - publications_topic_noabs_nosuper.php
+  8 - publications_topic_nobct_nosuper.php
+  9 - publications_topic_noconf_noabs.php
+  10 - publications_topic_noconf_nobct.php
+  11 - publications_topic_noabs_nobct.php
+  12 - publications_topic_nosuper.php
+  13 - publications_topic_noconf.php
+  14 - publications_topic_noabs.php
+  15 - publications_topic_nobct.php
+  16 - publications_topic.php
+  17 - publications_date_noconf_noabs_nobct_nosuper.php
+  18 - publications_date_noconf_noabs_nobct.php
+  19 - publications_date_noabs_nobct_nosuper.php
+  20 - publications_date_noconf_nobct_nosuper.php
+  21 - publications_date_noconf_noabs_nosuper.php
+  22 - publications_date_noconf_nosuper.php
+  23 - publications_date_noabs_nosuper.php
+  24 - publications_date_nobct_nosuper.php
+  25 - publications_date_noconf_noabs.php
+  26 - publications_date_noconf_nobct.php
+  27 - publications_date_noabs_nobct.php
+  28 - publications_date_nosuper.php
+  29 - publications_date_noconf.php
+  30 - publications_date_noabs.php
+  31 - publications_date_nobct.php
+  32 - publications_date.php
+  33 - publications_author_noconf_noabs_nobct_nosuper.php
+  34 - publications_author_noconf_noabs_nobct.php
+  35 - publications_author_noabs_nobct_nosuper.php
+  36 - publications_author_noconf_nobct_nosuper.php
+  37 - publications_author_noconf_noabs_nosuper.php
+  38 - publications_author_noconf_nosuper.php
+  39 - publications_author_noabs_nosuper.php
+  40 - publications_author_nobct_nosuper.php
+  41 - publications_author_noconf_noabs.php
+  42 - publications_author_noconf_nobct.php
+  43 - publications_author_noabs_nobct.php
+  44 - publications_author_nosuper.php
+  45 - publications_author_noconf.php
+  46 - publications_author_noabs.php
+  47 - publications_author_nobct.php
+  48 - publications_author.php
+  49 - publications_type_noconf_noabs_nobct_nosuper.php
+  50 - publications_type_noconf_noabs_nobct.php
+  51 - publications_type_noabs_nobct_nosuper.php
+  52 - publications_type_noconf_nobct_nosuper.php
+  53 - publications_type_noconf_noabs_nosuper.php
+  54 - publications_type_noconf_nosuper.php
+  55 - publications_type_noabs_nosuper.php
+  56 - publications_type_nobct_nosuper.php
+  57 - publications_type_noconf_noabs.php
+  58 - publications_type_noconf_nobct.php
+  59 - publications_type_noabs_nobct.php
+  60 - publications_type_nosuper.php
+  61 - publications_type_noconf.php
+  62 - publications_type_noabs.php
+  63 - publications_type_nobct.php
+  64 - publications_type.php
+ 

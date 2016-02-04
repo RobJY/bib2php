@@ -1,0 +1,25 @@
+Computational and Systems Neuroscience (CoSyNe)|http://cosyne.org
+14th IEEE Int'l Conference on Image Processing|http://www.icip2007.org/|Proc 14th IEEE Int'l Conf on Image Proc
+13th IEEE Int'l Conference on Image Processing|http://www.icip2006.org/|Proc 13th IEEE Int'l Conf on Image Proc
+Computational NeuroScience (CNS*03)|http://www.neuroinf.org/CNS/cns2003/index.shtml|Neurocomputing
+Computational NeuroScience (CNS*02)|http://www.neuroinf.org/CNS/cns2003/index.shtml|Annual Meeting, Neurosciences
+Current Opinion in Neurobiology|http://www.current-opinion.com/jnrb/about.htm?jcode=jnrb
+IEEE Trans Image Processing|http://www.signalprocessingsociety.org/publications/periodicals/image-processing/
+J. Neuroscience|http://www.jneurosci.org/
+Journal of Neuroscience|http://www.jneurosci.org/
+Journal of Vision|http://www.journalofvision.org/
+Nature Neuroscience|http://www.nature.com/neuro/
+Neural Computation|http://neco.mitpress.org/
+Neural Information Processing Systems (NIPS*09)|http://nips.cc/Conferences/2009/|Adv. Neural Information Processing Systems 22
+Neural Information Processing Systems (NIPS*08)|http://nips.cc/Conferences/2008/|Adv. Neural Information Processing Systems 21
+Neural Information Processing Systems (NIPS*07)|http://nips.cc/Conferences/2007/|Adv. Neural Information Processing Systems 20
+Neural Information Processing Systems (NIPS*06)|http://nips.cc/Conferences/2006/|Adv. Neural Information Processing Systems 19
+Neural Information Processing Systems (NIPS*05)|http://nips.cc/Conferences/2005/|Adv. Neural Information Processing Systems (NIPS*05)
+Neural Information Processing Systems (NIPS*04)|http://nips.cc/Conferences/2004/|Adv. Neural Information Processing Systems (NIPS*04)
+Neural Information Processing Systems (NIPS*03)|http://nips.cc/Conferences/2003/|Adv. Neural Information Processing Systems (NIPS*03)
+Neural Information Processing Systems (NIPS*02)|http://nips.cc/Conferences/2002/|Adv. Neural Information Processing Systems (NIPS*02)
+Neural Information Processing Systems (NIPS*01)|http://nips.cc/Conferences/2001/|Adv. Neural Information Processing Systems (NIPS*01)
+Neural Information Processing Systems (NIPS*00)|http://nips.cc/Conferences/2000/|Adv. Neural Information Processing Systems (NIPS*00)
+Neural Information Processing Systems (NIPS*99)|http://books.nips.cc/nips12.html|Adv. Neural Information Processing Systems (NIPS*99)
+Neural Information Processing Systems (NIPS*98)|http://books.nips.cc/nips11.html|Adv. Neural Information Processing Systems (NIPS*98)
+Neuron|http://www.cell.com/neuron/home

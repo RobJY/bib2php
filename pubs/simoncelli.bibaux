@@ -1,0 +1,2057 @@
+%% -----------------------------------------------------------------
+%% Refereed Journal Articles
+
+@ARTICLE{Rabinowitz15,
+  TOPIC="",
+  SUPERSEDES= "Rabinowitz15a|Rabinowitz14b",
+  RELATED= "Rabinowitz15c",
+  RELATED= "Goris13",	
+  }
+
+@ARTICLE{Ganmor15,
+  TOPIC="",
+  SUPERSEDES= "Ganmor15a",
+}
+
+@ARTICLE{Vintch14,
+  TOPIC="",
+  SUPERSEDES= "Vintch12|Vintch12b",
+  RELATED= "Freeman14",
+  RELATED= "Vintch12a",
+}
+
+@ARTICLE{Goris15,
+  TOPIC="",
+  COVER-PIC=    "http://www.cns.nyu.edu/pub/lcv/goris15-webBanner-sm.jpg",
+  COVER-URL=    "http://www.sciencedirect.com/science/article/pii/S0896627315008752/",
+  SUPERSEDES= "Goris13a",
+}
+
+@ARTICLE{Freeman14,
+  TOPIC="",
+  SUPERSEDES= "Freeman13a|Freeman12b",
+  RELATED= "Vintch14",
+  RELATED= "Vintch12",
+  RELATED= "Vintch11a",
+  RELATED= "Rust05",
+}
+
+@ARTICLE{Ganguli13,
+  TOPIC="",
+  SUPERSEDES= "Ganguli12b|Ganguli12a|Ganguli10a",
+  RELATED= "Doi12",
+  RELATED= "Karklin11b",
+  RELATED= "Girshick10",
+  RELATED="Initial NIPS*2010 publication|Ganguli10c",
+  RELATED= "Simoncelli01",
+}
+
+@ARTICLE{Goris13,
+  TOPIC= "",
+  SUPERSEDES= "Goris13b|Goris12a",
+  RELATED= "Rabinowitz14b",
+  RELATED= "Vidne11",
+  RELATED="Pillow08",
+  DL-TITLE= "``Is there signal in the noise?'' - News &amp; Views by Ecker &amp; Tolias",
+  DL-URL = "http://www.cns.nyu.edu/pub/lcv/EckerTolias-NewsViews14.pdf",
+}
+
+@ARTICLE{Ekanadham13,
+  TOPIC= "",
+  RELATED = "Pillow12",	
+  RELATED = "Continuous Basis Pursuit|Ekanadham11",	
+  SUPERSEDES = "Ekanadham11b|Ekanadham11c",
+}
+
+@ARTICLE{Freeman13,
+  TOPIC= "",
+  COVER-PIC=    "http://www.cns.nyu.edu/pub/lcv/freeman13-cover-small.jpg",
+  COVER-URL=    "http://www.cns.nyu.edu/pub/lcv/freeman13-cover.jpg",
+  DL-TITLE= "Supplementary Materials (pdf)",	
+  DL-URL = 	"http://www.cns.nyu.edu/pub/lcv/freeman13-supp.pdf",
+  RELATED= "Freeman10",
+}
+
+@ARTICLE{Pillow12,
+  TOPIC= "",
+  RELATED= "Ekanadham13",
+  RELATED= "Pillow08",
+  SUPERSEDES= 	"Pillow09a|Pillow08b",
+}
+
+@ARTICLE{Mcdermott12,
+  TOPIC= "",
+  DL-TITLE= "Supplementary Materials (pdf)|``An ear for statistics'' - News &amp; Views by Nelken and Cheveign&eacute;|Online sound texture examples",
+  DL-URL = 	"http://www.cns.nyu.edu/pub/lcv/mcdermott12-supp.pdf|http://www.cns.nyu.edu/pub/lcv/NelkenCheveigne-NewsViews13.pdf|http://www.cns.nyu.edu/~jhm/texture_examples/",
+  SUPERSEDES= 	"Mcdermott12b|Mcdermott12a",
+  RELATED = "Mcdermott10",
+  RELATED= "Freeman10",
+}
+
+@ARTICLE{Doi12,
+  TOPIC= "",
+  SUPERSEDES= 	"Doi11a|Doi10a|Doi08b|Doi08a",
+}
+
+@ARTICLE{Vidne11,
+  TOPIC= "",
+  SUPERSEDES= 	"Vidne10a|Vidne09a",
+  RELAGED= "Pillow08",
+}
+
+@ARTICLE{Mcdermott10,
+  TOPIC= "",
+  COVER-PIC=    "http://www.cns.nyu.edu/pub/lcv/mcdermott10-cover-small.jpg",
+  COVER-URL=    "http://www.cns.nyu.edu/pub/lcv/mcdermott10-cover.jpg",
+  DL-TITLE=   "Article only (pdf)|Supplementary Materials only (pdf)|Current Biology dispatch by Rabinowitz &amp; King (pdf)|Previous (short) conference paper|Online texture examples",
+  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/mcdermott10-reprint.pdf|http://www.cns.nyu.edu/pub/lcv/mcdermott10-supplementary.pdf|http://www.cns.nyu.edu/pub/lcv/rabinowitzKing-CBhighlight.pdf|http://www.cns.nyu.edu/~lcv/pubs/makeAbs.php?loc=Mcdermott09a|http://www.cns.nyu.edu/~jhm/texture_examples/",
+SUPERSEDES = "Mcdermott11c|Mcdermott11a|Mcdermott10a|Mcdermott08a",
+RELATED = "Mcdermott12",
+  RELATED= "Portilla99",
+}
+
+@ARTICLE{Freeman10,
+  TOPIC= "",
+  DL-TITLE=   "Supplementary Materials (pdf)|Science News article (web edition), 18 Aug 2011|Video of talk at Dartmouth meeting on Neural Computation, Aug 2011",
+  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/freeman10-supplementary.pdf|http://www.sciencenews.org/view/generic/id/333465/title/Lost_in_the_periphery_|http://youtu.be/45vvi6W1hdM",
+  SUPERSEDES= "Freeman10b|Freeman10a",
+  RELATED= "Portilla99",
+} %  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/freeman10-scienceNewsFeature.pdf",
+
+@ARTICLE{Ekanadham11,
+  TOPIC= "",
+  SUPERSEDES= "Ekanadham11a",
+  RELATED="Ekanadham11b",
+  RELATED="Figueras07a",
+  RELATED="Wang05e",
+}
+
+@ARTICLE{Girshick10,
+  TOPIC= "",
+  DL-TITLE=   "Supplementary Materials|&quot;Prior &amp; Prejudice&quot;, News &amp; Views by Emilio Salinas (pdf)|&quot;The Probabilistic Mind&quot;, Science News, 8 Oct 2011, vol 180, num 8, p 18",
+  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/girshick10-supp.pdf|http://www.cns.nyu.edu/pub/lcv/girshick10-salinas-newsViews.pdf|http://www.sciencenews.org/view/feature/id/334571/title/The_Probabilistic_Mind",
+  SUPERSEDES= "Girshick10a|Girshick09a",
+  RELATED= "Ganguli13",
+  RELATED=    "Simoncelli09a",
+  RELATED=    "Ganguli10c",
+  RELATED=    "Stocker06",
+} %  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/ScienceNews-ProbabilisticMind-Oct2011.pdf",
+
+@ARTICLE{Hedges10,
+  TOPIC= "",
+  SUPERSEDES = "Hedges08a|Farid95|Farid94a",
+}
+
+@ARTICLE{Raphan10,
+  TOPIC= "",
+  SUPERSEDES= "Raphan09b|Raphan06b|Raphan06a",
+  RELATED="nips*06 paper|Raphan06b",
+  RELATED=    "Simoncelli09a",
+}
+
+@ARTICLE{Series09,
+  TOPIC= "",
+  SUPERSEDES="Series08a",
+}
+
+@ARTICLE{Stocker09,
+  TOPIC= "",
+  SUPERSEDES="Stocker07b",
+}
+
+@ARTICLE{Lyu08c,
+  TOPIC= "",
+  SUPERSEDES = "Lyu08d",
+  DL-TITLE=   "Supplementary Materials (color figures)",
+  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/lyu08c-supplementary.pdf",
+  COVER-PIC=    "http://www.cns.nyu.edu/pub/lcv/Lyu08c-cover-small.jpg",
+  COVER-URL=    "http://www.cns.nyu.edu/pub/lcv/Lyu08c-cover.pdf",
+  RELATED="nips*08 paper (includes sound statistics)|Lyu08d",
+  RELATED="original TechReport (Apr08)|Lyu08a",
+}
+
+@ARTICLE{Hammond08,
+  TOPIC= "",
+  SUPERSEDES= "Hammond06b|Hammond06a",
+}
+
+@ARTICLE{Wang08,
+  TOPIC= "",
+  SUPERSEDES= "Wang04a|Wang05d",
+}
+
+@ARTICLE{Lyu08,
+  TOPIC= "",
+  SUPERSEDES = "Lyu06a",
+  RELATED="Nonlinear (divisive) multi-scale decomposition based on random field model|Lyu07a",
+  RELATED="Local Gaussian scale mixture model, with denoising|Portilla03",
+  RELATED="Initial description of Gaussian scale mixtures for image modeling|Wainwright99b",
+}
+
+@ARTICLE{Pillow08,
+  TOPIC= "",
+  SUPERSEDES= "Pillow08a|Pillow07b|Pillow07a|Pillow05a|Pillow05b",
+  DL-TITLE=   "Supplementary Materials (pdf)|Editor's summary",
+  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/pillow08-SuppMaterials-reprint.pdf|http://www.nature.com/nature/journal/v454/n7207/edsumm/e080821-13.html",
+  RELATED="Related model using stochastic integrate-and-fire|Pillow05",
+}
+
+@ARTICLE{Raphan08,
+  TOPIC= "",
+  SUPERSEDES=   "Raphan07a",  
+}
+
+@ARTICLE{Rust06,
+  TOPIC=        "",
+  DL-TITLE=     "Supplementary materials - stimulus movie (mov, 1.9M)|News & Views article by Zhang & Britten (pdf, 285k)",
+  DL-URL=       "http://www.cns.nyu.edu/pub/eero/rust06-suppMovie.mov|http://www.cns.nyu.edu/pub/eero/rust06-newsViews.pdf",
+  COVER-PIC=    "http://www.cns.nyu.edu/~lcv/ABSTRACTS/rust06-cover-small.jpg",
+  COVER-URL=    "http://www.cns.nyu.edu/pub/lcv/rust06-cover.gif",
+  RELATED="Characterizing neural responses|Schwartz05",
+  RELATED="Related two-stage model for neurons in area MT|Simoncelli96",
+  SUPERSEDES= "Movshon06a|Rust05b",
+}
+
+@ARTICLE{Schwartz05,
+  TOPIC=        "",
+  RELATED="An information-theoretic generalization|Pillow05c",
+  RELATED="Application to V1 neurons|Rust05",
+}
+
+@ARTICLE{Pillow05c,
+  TOPIC=        "",
+  KEYWORDS=     "neuron, characterization, white noise, reverse correlation, poisson, integrate-and-fire",
+  RELATED="Companion paper on Spike-triggered average and covariance methods|Schwartz05",
+SUPERSEDE="Pillow06a",
+}
+
+@ARTICLE{Wang05,
+  TOPIC=        "Statistical Properties of Natural Images - Perceptual Image Metrics|Statistical Properties of Natural Images - Compression|Image Analysis and Representation - Nonlinear Multi-Scale Representation",
+  DL-TITLE=     "Software & further description",
+  DL-URL=       "http://www.cns.nyu.edu/~lcv/qaware/",
+  COPY=         "IEEE Signal Processing Society",
+
+}
+
+@ARTICLE{Stocker06,
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Perception",
+  DL-TITLE=     "Supplementary materials - raw data (pdf, 1.8M)|News & Views article by Matteo Carandini (pdf, 385k)|ScienceNOW press release",
+  DL-URL=       "http://www.cns.nyu.edu/pub/eero/stocker06-supplementary.pdf|http://www.cns.nyu.edu/pub/eero/stocker06-carandini-newsViews.pdf|http://sciencenow.sciencemag.org/cgi/content/full/2006/321/2",
+  COVER-URL=    "http://www.cns.nyu.edu/pub/eero/stocker06-cover.gif",
+  COVER-PIC=    "http://www.cns.nyu.edu/~lcv/ABSTRACTS/stocker06-cover-small.jpg",
+  SUPERSEDES= "Stocker05a|Stocker04b|Stocker04a",
+  RELATED="Bayesian model and adaptation|Stocker05c",
+  RELATED="Physiological instantiation of Bayesian motion model|Simoncelli03a",
+  RELATED="Previous (Gaussian) Bayesian perceptual model|Weiss02|Simoncelli-phd|Farid94a|Simoncelli92b",
+  RELATED="Bayesian multi-scale optical flow computation|Simoncelli98c|Simoncelli-cvpr91",
+}
+
+@ARTICLE{Pillow05,
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+  RELATED="Convexity of this recurrent, noisy, leaky integrate-and-fire model|Paninski04",
+  RELATED="A more general book chapter on characterizing neural responses|Simoncelli03c",
+  RELATED="Comparison of model fit to intracellular and extracellular data|Paninski04a",
+  RELATED="Initial publication as conference paper|Pillow03b",
+  RELATED="Description of biases in reverse-correlation (spike-triggered average) estimates of the LNP model|Pillow02a",
+}
+
+@ARTICLE{Malo04,
+  TOPIC=        "Statistical Properties of Natural Images - Compression",
+  COPY=         "IEEE Signal Processing Society",
+
+}
+
+@ARTICLE{Rust05,
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+  COVER-PIC=    "http://www.cns.nyu.edu/~lcv/ABSTRACTS/rust05-cover-small.jpg",
+  COVER-URL=    "http://www.cns.nyu.edu/pub/lcv/rust05-cover.pdf",
+  COPY=         "Cell Press, Elsevier Inc.",
+  SUPERSEDES= "Rust04a|Rust03a|Rust03b",
+  RELATED="Early versions of this work|Rust03a|Rust03b|Rust04a",
+  RELATED="A more general book chapter on characterizing neural responses|Simoncelli03c",
+  RELATED="Spike-triggered covariance analysis of suppressive responses in retina|Schwartz01b",
+  RELATED="Fitting retinal ganglion cell responses with a generalized integrate-and-fire model|Pillow05",
+}
+
+@ARTICLE{Paninski04,
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+  COPY=         "MIT Press",
+  SUPERSEDES=   "Pillow03b|Pillow03a|Paninski03d",
+  RELATED="Previous conference publication of this work|Pillow03b",
+  RELATED="Application to retinal data|Pillow05",
+  RELATED="A more general book chapter on characterizing neural responses|Simoncelli03c",
+  RELATED="Description of biasses in reverse-correlation (spike-triggered average) estimates of the LNP model|Pillow02a",
+}
+
+@ARTICLE{Wang03,
+  OTHER=        "Recipient, <A HREF='http://www.signalprocessingsociety.org/awards-fellows/award-recipient/'>IEEE Signal Processing Society Best Paper Award, 2009</A>.",
+  TOPIC=        "Statistical Properties of Natural Images - Perceptual Image Metrics",
+  DL-TITLE=     "Online description",
+  DL-URL=       "http://www.cns.nyu.edu/~lcv/ssim/",
+
+}
+
+@ARTICLE{Farid03,
+  TOPIC=        "Image Analysis and Representation - Orientation Analysis / Derivative Filter Design",
+  DL-TITLE=     "Filters/software",
+  DL-URL=       "http://www.cs.dartmouth.edu/~farid/research/derivative.html",
+  RELATED="Short conference papers|Farid97a|Simoncelli94b",
+}
+
+@ARTICLE{Portilla03,
+  OTHER=        "Recipient, <A HREF='http://www.signalprocessingsociety.org/awards-fellows/awardspage/best-paper/'>IEEE Signal Processing Society Best Paper Award, 2008</A>.",
+  TOPIC=        "Statistical Properties of Natural Images - Denoising",
+  DL-TITLE=     "Description, software & test images",
+  DL-URL=       "http://decsai.ugr.es/~javier/denoise",
+  COPY=         "IEEE Signal Processing Society",
+  SUPERSEDES= "Strela00a",
+  RELATED="Image modeling and denoising with random fields of GSMs|Lyu08",
+  RELATED="Image restoration using GSMs|Portilla03a",
+  RELATED="Original technical report version (Sep 2002)|Portilla02a",
+  RELATED="Initial conference publication of denoising using GSMs|Portilla01a",
+  RELATED="Initial publication of GSMs as a model for images|Wainwright99b",
+  RELATED="Earlier publication on contextual denoising using local variance prediction|Simoncelli98e",
+  RELATED="Smooth shrinkage as  Bayesian least squares estimation|Simoncelli96c",
+}
+
+@ARTICLE{Simoncelli03b,
+  TOPIC=        "Statistical Properties of Natural Images - Relationship to Neurobiology (the 'Efficient Coding' Hypothesis)",
+  COPY=         "Elsevier Science Ltd.",
+
+}
+
+@ARTICLE{Paninski03c,
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+  COPY=         "Institute of Physics Publishing",
+
+}
+
+@ARTICLE{Simoncelli02b,
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+  COPY=         "Elsevier Science Ltd.",
+
+}
+
+@ARTICLE{Srivastava02,
+  TOPIC=        "Statistical Properties of Natural Images - Statistical Modeling",
+  COPY=         "Kluwer Academic Publishers",
+
+}
+
+@ARTICLE{Weiss02,
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Perception",
+  DL-TITLE=     "Accompanying News&Views article (528k,pdf)",
+  DL-URL=       "http://www.cns.nyu.edu/pub/eero/Kersten-Geisler-NN-news+views.pdf",
+  COPY=         "Macmillan Magazines Ltd.",
+  RELATED="More general Bayesian model fit to perceptual data|Stocker06|Stocker04b",
+  RELATED="Physiological instantiation of Bayesian motion model|Simoncelli03a",
+  RELATED="Bayesian perceptual model|Simoncelli-phd|Farid94a|Simoncelli92b",
+  RELATED="Bayesian multi-scale optical flow computation|Simoncelli98c|Simoncelli-cvpr91",
+}
+
+@ARTICLE{Schwartz01,
+  TOPIC=        "Statistical Properties of Natural Images - Relationship to Neurobiology (the 'Efficient Coding' Hypothesis)|Visual Motion: Analysis and Representation - Modeling Physiology",
+  COPY=         "Macmillan Magazines Ltd.",
+  SUPERSEDES= "Simoncelli98d|Schwartz99a|Simoncelli99c|Simoncelli98f|Simoncelli98a",
+  RELATED="Simoncelli01",
+  RELATED="Wainwright00c",
+  RELATED="Simoncelli98d",
+  RELATED="Simoncelli98a",
+  RELATED="Simoncelli97b",
+}
+
+@ARTICLE{Wainwright00,
+  TOPIC=        "Statistical Properties of Natural Images - Statistical Modeling",
+SUPERSEDES="Wainwright00b|Wainwright00a|Wainwright01b",
+}
+
+@ARTICLE{Simoncelli01a,
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Physiology",
+  COPY=         "Nature Publishing Group",
+}
+
+@ARTICLE{Simoncelli01,
+  TOPIC=        "Statistical Properties of Natural Images - Relationship to Neurobiology (the 'Efficient Coding' Hypothesis)",
+  COPY=         "2001 Annual Reviews",
+
+}
+
+@ARTICLE{Schrater00,
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Perception",
+  COPY=         "Macmillan Magazines Ltd.",
+SUPERSEDES= "Schrater97a",
+}
+
+@ARTICLE{Portilla99,
+  TOPIC=        "Statistical Properties of Natural Images - Texture Analysis/Representation/Synthesis",
+  DL-TITLE=     "Oneline Description, Examples, and Software",
+  DL-URL=       "http://www.cns.nyu.edu/~lcv/texture",
+  COPY=         "Kluwer Academic Publishers",
+  SUPERSEDES= "Portilla99a",
+  SUPERSEDES= "Simoncelli98b",
+  RELATED="Previous 5-page conference publication|Simoncelli98b",
+}
+
+@ARTICLE{Schrater99,
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Perception",
+  DL-TITLE=     "Accompanying News & Views article (490k, pdf)",
+  DL-URL=       "http://www.cns.nyu.edu/pub/eero/Braun-NN-news+views.pdf",
+  COPY=         "Macmillan Magazines Ltd.",
+SUPERSEDES= "Schrater96",
+}
+
+@ARTICLE{Buccigrossi97,
+  TOPIC=        "Statistical Properties of Natural Images - Compression",
+  SUPERSEDES=   "Buccigrossi97a|Buccigrossi96|Simoncelli97a",
+  DL-TITLE=     "TechReport version: 5/30/97 (552k, ps.gz)|Brief Description & Software",
+  DL-URL=       "http://www.cns.nyu.edu/pub/eero/buccigrossi97a.ps.gz|http://www.cns.nyu.edu/~eero/EPWIC/",
+  COPY=         "IEEE Signal Processing Society",
+
+}
+
+@ARTICLE{Schrater97,
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Perception",
+SUPERSEDES= "Schrater95|Schrater94a",
+}
+
+@ARTICLE{Farid97,
+  TOPIC=        "Image Analysis and Representation - Range Estimation",
+  COPY=         "Optical Society of America",
+
+}
+
+@ARTICLE{Simoncelli96,
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Physiology",
+  DL-TITLE=     "Model Description, Software & References",
+  DL-URL=       "http://www.cns.nyu.edu/~eero/MT-model.html",
+  COPY=         "Elsevier Science B.V.",
+SUPERSEDES= "Simoncelli94a",
+}
+
+@INPROCEEDINGS{Heeger96a,
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Physiology",
+  COPY=         "National Academy of Sciences",
+
+}
+
+@ARTICLE{Simoncelli95a,
+  TOPIC=        "Image Analysis and Representation - Orientation Analysis / Derivative Filter Design",
+  SUPERSEDES= "Simoncelli94c",
+  RELATED="Conference paper|Simoncelli94c",
+  RELATED="Rotation-invariant pattern classification using wedge filters|Simoncelli96d",
+}
+
+@ARTICLE{Nimeroff95,
+  TOPIC=        "Image Analysis and Representation - Rendering Using Illumination Bases",
+
+}
+
+@ARTICLE{Simoncelli91,
+  TOPIC=        "Image Analysis and Representation - Multi-Scale, Oriented Representations (Steerable Pyramids)",
+
+}
+
+@ARTICLE{Simoncelli89,
+  TOPIC=        "",
+  COPY=         "IEEE Signal Processing Society",
+
+}
+
+%% -----------------------------------------------------------------
+%% Book Chapters, Theses
+
+@INCOLLECTION{Movshon15a,
+TOPIC= "",
+}
+
+@PHDTHESIS{Vintch-phd,
+TOPIC= "",
+}
+
+@PHDTHESIS{Freeman-phd,
+TOPIC= "",
+}
+
+@PHDTHESIS{Ganguli-phd,
+TOPIC= "",
+}
+
+@PHDTHESIS{Ekanadham-phd,
+TOPIC= "",
+}
+
+@INCOLLECTION{Simoncelli09a,
+TOPIC= "",
+  DL-TITLE=   "Science News article, 8 Oct 2011, vol 180, num 8, p 18",
+  DL-URL=     "http://www.sciencenews.org/view/feature/id/334571/title/The_Probabilistic_Mind",
+}
+
+@PHDTHESIS{Hedges-phd,
+TOPIC= "",
+}
+
+@INCOLLECTION{Simoncelli08a,
+TOPIC= "",
+}
+
+@INCOLLECTION{Rajashekar08a,
+TOPIC= "",
+}
+
+@PHDTHESIS{Hammond-phd,
+  TOPIC=        "",
+}
+
+@PHDTHESIS{Raphan-phd,
+  OTHER=       "Recipient, 2008 K. O. Friedrichs prize for an outstanding dissertation in mathematics.",
+  TOPIC=        "",
+}
+
+@INCOLLECTION{Simoncelli05a,
+  TOPIC=        "Statistical Properties of Natural Images - Statistical Modeling",
+}
+
+@INCOLLECTION{Wang05c,
+  TOPIC=        "Statistical Properties of Natural Images - Perceptual Image Metrics",
+
+}
+
+@PHDTHESIS{Pillow-phd,
+  TOPIC=        "",
+
+}
+
+@INCOLLECTION{Simoncelli03c,
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+  COPY=         "MIT Press",
+
+}
+
+@PHDTHESIS{Rust-phd,
+  TOPIC=        "",
+
+}
+
+@PHDTHESIS{Paninski-phd,
+  TOPIC=        "",
+
+}
+
+@INCOLLECTION{Simoncelli03a,
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Physiology",
+  COPY=         "MIT Press, Cambridge, MA.",
+
+}
+
+@PHDTHESIS{Schwartz-phd,
+  TOPIC=        "",
+
+}
+
+@INCOLLECTION{Wainwright00c,
+  TOPIC=        "Statistical Properties of Natural Images - Relationship to Neurobiology (the 'Efficient Coding' Hypothesis)",
+  COPY=         "MIT Press, 2001",
+SUPERSEDES= "Wainwright99a",
+}
+
+@PHDTHESIS{Buccigrossi-phd,
+  TOPIC=        "",
+
+}
+
+@INCOLLECTION{Simoncelli98e,
+  TOPIC=        "Statistical Properties of Natural Images - Denoising",
+  COPY=         "Springer-Verlag, New York, June 1999",
+  RELATED="Image denoising using a scale mixture of Gaussians in the wavelet domain|Portilla03",
+}
+
+@INCOLLECTION{Simoncelli98c,
+  TOPIC=        "Visual Motion: Analysis and Representation - Estimation of Optic Flow",
+  COPY=         "Academic Press, April 1999",
+
+}
+
+@PHDTHESIS{Farid-phd,
+  TOPIC=        "",
+
+}
+
+@INCOLLECTION{Thomas94b,
+  TOPIC=        "Visual Motion: Analysis and Representation - Estimation of Depth/Heading",
+
+}
+
+@PHDTHESIS{Simoncelli-phd,
+  TOPIC=        "Visual Motion: Analysis and Representation - General",
+ SUPERSEDES= "Simoncelli93b",
+
+}
+
+@INCOLLECTION{Heeger92,
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Perception",
+
+}
+
+@MASTERSTHESIS{Kalb91,
+
+}
+
+@INCOLLECTION{Adelson91,
+  TOPIC=        "",
+
+}
+
+@INCOLLECTION{Simoncelli90,
+  TOPIC=        "Image Analysis and Representation - Orthogonal Multi-Scale Image Representations (Wavelets)",
+
+}
+
+@MASTERSTHESIS{Simoncelli-ms,
+  TOPIC=        "Statistical Properties of Natural Images - Compression|Image Analysis and Representation - Orthogonal Multi-Scale Image Representations (Wavelets)",
+}
+
+@MISC{patent3,
+  OMIT=         "true",  
+  TOPIC=        "",
+
+}
+
+@MISC{patent2,
+  OMIT=         "true",
+  TOPIC=        "",
+}
+
+@MISC{patent1,
+  OMIT=         "true",
+  TOPIC=        "",
+}
+
+%% -----------------------------------------------------------------
+%% Refereed Conference Papers
+
+@INPROCEEDINGS{Balle16a,
+RELATED="Lyu08c",
+RELATED="Lyu08b",
+STATUS= "To appear.",
+}
+
+@INPROCEEDINGS{Henaff16b,
+RELATED="Henaff16a",
+STATUS= "To appear.",
+}
+
+@INPROCEEDINGS{Laparra16a,
+  RELATED= "Berardino16a",	
+}
+
+@INPROCEEDINGS{Henaff15a,
+  RELATED= "Balle14a",
+  RELATED= "Lyu08",
+  RELATED= "Guerrero-Colon08a",
+  RELATED= "Wainwright99b",
+}
+
+@INPROCEEDINGS{Malo15a,
+  RELATED= "Wang08",
+  RELATED= "Malo04",
+  RELATED= "Schwartz01",
+}
+
+@INPROCEEDINGS{Balle14a,
+OTHER= "Recipient, top 10% paper award.",
+  TOPIC= "",	
+DL-TITLE= "Examples and iPython software description|iPython software package for download",
+DL-URL = "http://www.cns.nyu.edu/~balle/CICA.html|http://www.cns.nyu.edu/~balle/CICA.zip",
+}
+
+@INPROCEEDINGS{Karklin12,
+  TOPIC= "",	
+  DL-TITLE=   "Supplementary material (example sound files)",
+  DL-URL=   "http://www.cns.nyu.edu/pub/eero/Karklin-Ekanadham-Simoncelli-NIPS12_supp.tar.gz",
+  RELATED= "Doi12",
+} 
+
+@INPROCEEDINGS{Vintch12,
+  TOPIC= "",	
+  RELATED= "Rust05",
+} 
+
+@INPROCEEDINGS{Ekanadham11c,
+  TOPIC= "",	
+  RELATED= "Ekanadham11",
+} 
+
+@INPROCEEDINGS{Karklin11b,
+  TOPIC= "",	
+  RELATED= "Karklin11a",
+  RELATED= "Lyu08c",
+  RELATED= "Simoncelli01",
+}
+
+
+@INPROCEEDINGS{Ekanadham11a,
+  TOPIC= "",	
+} 
+
+@INPROCEEDINGS{Ganguli10c,
+  STATUS= "Presented at NIPS, Dec 2010.",
+  TOPIC= "",	
+SUPERSEDES= "Ganguli10a",
+  RELATED="Bayesian readout using optimally efficient populations|Ganguli12a",
+  RELATED="Ganguli PhD Thesis|Ganguli-phd",
+}
+
+@INPROCEEDINGS{Sinz09a,
+  TOPIC= "",	
+  DL-TITLE= "Supplemental notes",
+  DL-URL=   "http://www.cns.nyu.edu/pub/eero/sinz09a-supp.pdf",
+
+}
+
+@INPROCEEDINGS{Mcdermott09a,
+	TOPIC= "",
+
+}
+
+@INPROCEEDINGS{Rajashekar09a,
+	TOPIC= "",
+
+}
+
+@INPROCEEDINGS{Lyu08d,
+  TOPIC= "",
+  STATUS= "Presented at NIPS, Dec 2008.",
+  RELATED="Courant Inst. technical report|Lyu08a",
+}
+
+@INPROCEEDINGS{Guerrero-Colon08a,
+	TOPIC= "",
+
+}
+
+@INPROCEEDINGS{Lyu08b,
+	TOPIC= "",
+
+}
+
+@INPROCEEDINGS{Figueras08a,
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Stocker07a,
+  TOPIC=        "",
+  DL-TITLE=     "Brief review in Attention, Perception &amp; Psychophysics",
+  DL-URL=       "http://www.cns.nyu.edu/pub/eero/AttPerPsy09-reviewOfStocker07a.pdf",
+SUPERSEDES= "Stocker08b|Stocker08a",
+}
+
+@INPROCEEDINGS{Raphan07a,
+  TOPIC=        "",
+  OTHER=  "Winner, IBM student paper award."
+
+}
+
+@INPROCEEDINGS{Hammond07a,
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Figueras07a,
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Lyu07a,
+  TOPIC=        "",
+  COPY=         "SPIE",
+
+}
+
+@INPROCEEDINGS{Raphan06b,
+  TOPIC=        "",
+  COPY=         "MIT Press, Cambridge, MA",
+  RELATED="Tech. Report on non-parametric image denoising using implicit-prior methods|Raphan07b",
+  RELATED="Optimal denoising in redundant bases|Raphan07a",
+}
+
+@INPROCEEDINGS{Lyu06a,
+  TOPIC=        "",
+  COPY=         "MIT Press, Cambridge, MA",
+  RELATED="Initial description of Gaussian scale mixtures for image modeling|Wainwright99b",
+  RELATED="Local Gaussian scale mixture model, with denoising|Portilla03",
+  RELATED="Nonlinear (divisive) multi-scale decomposition based on random field model|Lyu07a",
+}
+
+@INPROCEEDINGS{Hammond06b,
+  TOPIC=        "",
+  COPY=         "IEEE Computer Society",
+
+}
+
+@INPROCEEDINGS{Stocker05c,
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Perception",
+  COPY=         "MIT Press, Cambridge, MA.",
+SUPERSEDES= "Stocker06a",
+}
+
+@INPROCEEDINGS{Wang05e,
+  TOPIC=        "Statistical Properties of Natural Images - Perceptual Image Metrics|Statistical Properties of Natural Images - Enhancement",
+  COPY=         "IEEE Computer Society",
+
+}
+
+@INPROCEEDINGS{Bonnier05a,
+  TOPIC=        "Statistical Properties of Natural Images - Enhancement",
+  COPY=         "IEEE Computer Society",
+
+}
+
+@INPROCEEDINGS{Wang05b,
+  TOPIC=        "Statistical Properties of Natural Images - Perceptual Image Metrics",
+
+}
+
+@INPROCEEDINGS{Wang05a,
+  TOPIC=        "Statistical Properties of Natural Images - Perceptual Image Metrics",
+
+}
+
+@INPROCEEDINGS{Wichmann04a,
+  TOPIC=        "Statistical Properties of Natural Images - Perceptual Image Metrics|Visual Motion: Analysis and Representation - Modeling Perception",
+  COPY=         "MIT Press, Cambridge, MA",
+
+}
+
+@INPROCEEDINGS{Stocker04b,
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Perception",
+  COPY=         "MIT Press, Cambridge, MA",
+
+}
+
+@INPROCEEDINGS{Paninski04a,
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+  COPY=         "Elsevier",
+
+}
+
+@INPROCEEDINGS{Wang04a,
+  TOPIC=        "Statistical Properties of Natural Images - Perceptual Image Metrics",
+  COPY=         "Society for Photo-optical Instrumentation Engineers",
+  RELATED= "Wang08",
+}
+
+@INPROCEEDINGS{Pillow03b,
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+  COPY=         "MIT Press, Cambridge, MA",
+  OTHER=        "Winner, best student paper award.",
+}
+
+@INPROCEEDINGS{Wang03a,
+  TOPIC=        "Statistical Properties of Natural Images - Enhancement",
+  COPY=         "MIT Press, Cambridge, MA",
+}
+
+@INPROCEEDINGS{Wang03b,
+  TOPIC=        "Statistical Properties of Natural Images - Perceptual Image Metrics",
+  DL-TITLE=     "Online description",
+  DL-URL=       "http://www.cns.nyu.edu/~lcv/ssim",
+  COPY=         "IEEE Computer Society",
+
+}
+
+@INPROCEEDINGS{Valerio03a,
+  TOPIC=        "Image Analysis and Representation - Nonlinear Multi-Scale Representation",
+
+}
+
+@INPROCEEDINGS{Portilla03a,
+  TOPIC=        "Statistical Properties of Natural Images - Denoising",
+  COPY=         "IEEE Computer Society",
+  RELATED="Image denoising using a scale mixture of Gaussians in the wavelet domain|Portilla03",
+}
+
+@INPROCEEDINGS{Pillow03a,
+  TOPIC=        "",
+  RELATED="CNS*02 article|Pillow02a",
+  RELATED="Book chapter on neural characterization|Simoncelli03c",
+}
+
+@INPROCEEDINGS{Rust03a,
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+  COPY=         "Elsevier publishers",
+
+}
+
+@INPROCEEDINGS{Pillow02a,
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+  COPY=         "Elsevier",
+
+}
+
+@INPROCEEDINGS{Schwartz01b,
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+  COPY=         "MIT Press, Cambridge, MA",
+  OTHER=        "Honorable mention, best student paper award.",
+
+}
+
+@INPROCEEDINGS{Portilla01a,
+  TOPIC=        "Statistical Properties of Natural Images - Denoising",
+  COPY=         "IEEE Computer Society",
+  RELATED="Bayesian denoising of visual images in the wavelet domain|Simoncelli98e",
+  RELATED="Image denoising using a scale mixture of Gaussians in the wavelet domain|Portilla03",
+}
+
+@INPROCEEDINGS{Schwartz00a,
+  TOPIC=        "Statistical Properties of Natural Images - Relationship to Neurobiology (the 'Efficient Coding' Hypothesis)",
+  COPY=         "MIT Press, Cambridge, MA",
+
+}
+
+@INPROCEEDINGS{Portilla00a,
+  TOPIC=        "Statistical Properties of Natural Images - Denoising",
+  COPY=         "IEEE Computer Society",
+
+}
+
+@INPROCEEDINGS{Wainwright00b,
+  TOPIC=        "Statistical Properties of Natural Images - Denoising",
+  COPY=         "IEEE Computer Society",
+
+}
+
+@INPROCEEDINGS{Strela00a,
+  TOPIC=        "Statistical Properties of Natural Images - Denoising",
+  COPY=         "SPIE - the International Society for Optical Engineering, 2000",
+
+}
+
+@INPROCEEDINGS{Wainwright00a,
+  TOPIC=        "Statistical Properties of Natural Images - Statistical Modeling",
+  COPY=         "SPIE - the International Society for Optical Engineering, 2000",
+
+}
+
+@INPROCEEDINGS{Liang00,
+  TOPIC=        "",
+  OMIT=         "true",
+
+}
+
+@INPROCEEDINGS{Mikaelian00,
+  TOPIC=        "",
+SUPERSEDES= "Mikaelian98",
+}
+
+@INPROCEEDINGS{Wainwright99b,
+  TOPIC=        "Statistical Properties of Natural Images - Statistical Modeling",
+  COPY=         "MIT Press, Cambridge, MA, 2000",
+
+}
+
+@INPROCEEDINGS{Simoncelli99b,
+  TOPIC=        "Statistical Properties of Natural Images - Statistical Modeling",
+  COPY=         "SPIE, 1999",
+  RELATED="Statistical Modeling: <b>Random Cascades on Wavelet Trees and Their Use in Modeling and Analyzing Natural Imagery.</b> M J Wainwright and E P Simoncelli and A S Willsky. <i>Applied and Computational Harmonic Analysis</i>, 11(1), 2001. In Press.|Wainwright00",
+  RELATED="Compression: <b>Image Compression via Joint Statistical Characterization in the Wavelet Domain</b>. R W Buccigrossi and E P Simoncelli. <i>IEEE Trans Image Processing</i>, 8(12):1688-1701, Dec 1999.|Buccigrossi97",
+  RELATED="Denoising: <b>Adaptive Wiener Denoising using a Gaussian Scale Mixture Model in the Wavelet Domain</b>. J Portilla, V Strela, M Wainwright, and E P Simoncelli. <i>8th IEEE Int'l Conf on Image Processing</i>. Thessaloniki, Greece. 7-10 October 2001.|Portilla01a",
+  RELATED="Texture Modeling: <b>A parametric texture model based on joint statistics of complex wavelet coefficients</b>. J Portilla and E P Simoncelli. <i>Int'l Journal of Computer Vision</i> 40(1):49-71, October 2000.|Portilla99",
+}
+
+@INPROCEEDINGS{Portilla99a,
+  TOPIC=        "Statistical Properties of Natural Images - Texture Analysis/Representation/Synthesis",
+  SUPERSEDES= "Portilla98",
+  DL-TITLE=     "Online Description & Examples",
+  DL-URL= 	"http://www.cns.nyu.edu/~eero/texture",  
+  RELATED="Int'l Journal of Computer Vision, 2000|Portilla99",
+}
+
+@INPROCEEDINGS{Simoncelli99a,
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Simoncelli98d,
+  TOPIC=        "Statistical Properties of Natural Images - Relationship to Neurobiology (the 'Efficient Coding' Hypothesis)",
+  COPY=         "MIT Press, Cambridge, MA",
+
+}
+
+@INPROCEEDINGS{Simoncelli98b,
+  TOPIC=        "Statistical Properties of Natural Images - Texture Analysis/Representation/Synthesis",
+  DL-TITLE=     "Online Description & Examples|Presentation Slides (pdf, 800k)",
+  DL-URL=       "http://www.cns.nyu.edu/~eero/texture|http://www.cns.nyu.edu/~eero/SLIDES/simoncelli98b-slides.pdf",
+  COPY=         "IEEE Signal Processing Society",
+  RELATED="Int'l Journal of Computer Vision, 2000|Portilla99",
+}
+
+@INPROCEEDINGS{Simoncelli97b,
+  TOPIC=        "Statistical Properties of Natural Images - Statistical Modeling",
+  COPY=         "IEEE Signal Processing Society",
+</i> 40(1):49-71, October, 2000.",
+  RELATED="Statistical Modeling|Lyu08c|Simoncelli05a|Wainwright00|Wainwright99b",
+  RELATED="Compression|Buccigrossi97",
+  RELATED="Denoising|Lyu08|Colon08a|Portilla03",
+  RELATED="Texture Modeling|Portilla99",
+  RELATED="Neural Representation|Wainwright00c|Schwartz01",
+}
+
+@INPROCEEDINGS{Simoncelli97a,
+  TOPIC=        "Statistical Properties of Natural Images - Compression",
+  DL-TITLE=     "Brief Description & Software",
+  DL-URL= 	"http://www.cns.nyu.edu/~eero/EPWIC/",
+  COPY=         "IEEE Signal Processing Society",
+  RELATED="IEEE Trans. Image Processing, 1999|Buccigrossi97",
+}
+
+@INPROCEEDINGS{Farid97a,
+  TOPIC=        "Image Analysis and Representation - Orientation Analysis / Derivative Filter Design",
+
+}
+
+@INPROCEEDINGS{Mendels97,
+  TOPIC=        "Visual Motion: Analysis and Representation - Estimation of Depth/Heading",
+
+}
+
+@INPROCEEDINGS{Buccigrossi96,
+  TOPIC=        "Statistical Properties of Natural Images - Compression",
+  COPY=         "IEEE Signal Processing Society",
+
+}
+
+@INPROCEEDINGS{Farid96,
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Simoncelli96d,
+  TOPIC=        "Image Analysis and Representation - Orientation Analysis / Derivative Filter Design",
+  COPY=         "IEEE Signal Processing Society",
+
+}
+
+@INPROCEEDINGS{Simoncelli96c,
+  TOPIC=        "Statistical Properties of Natural Images - Denoising",
+  COPY=         "IEEE Signal Processing Society",
+  RELATED="Bayesian wavelet denoising|Simoncelli98e|Portilla03",
+  RELATED="Earliest publication|",
+}
+
+@INPROCEEDINGS{Simoncelli96a,
+  TOPIC=        "Image Analysis and Representation - Range Estimation",
+
+}
+
+@INPROCEEDINGS{Karasaridis96,
+  TOPIC=        "",
+  DL-TITLE=     "Source code and filter kernels",
+  DL-URL= 	"http://www.cns.nyu.edu/~eero/steerpyr",
+  COPY=         "IEEE Signal Processing Society",
+
+}
+
+@INPROCEEDINGS{Simoncelli95b,
+  TOPIC=        "Image Analysis and Representation - Orientation Analysis / Derivative Filter Design",
+  DL-TITLE=     "Source code and filter kernels",
+  DL-URL= 	"http://www.cns.nyu.edu/~eero/steerpyr",
+  COPY=         "IEEE Signal Processing Society",
+
+}
+
+@INPROCEEDINGS{Simoncelli94c,
+  TOPIC=        "",
+  RELATED="Simoncelli95a",
+}
+
+@INPROCEEDINGS{Simoncelli94b,
+  TOPIC=        "Image Analysis and Representation - Orientation Analysis / Derivative Filter Design",
+  COPY=         "IEEE Signal Processing Society",
+  RELATED="Full-length paper|Farid03",
+}
+
+@INPROCEEDINGS{Nimeroff94a,
+  TOPIC=        "Image Analysis and Representation - Rendering Using Illumination Bases",
+
+}
+
+@INPROCEEDINGS{Thomas94,
+  TOPIC=        "",
+  SUPERSEDES= "Thomas95",
+
+}
+
+@INPROCEEDINGS{Darrell93d,
+  TOPIC=        "Visual Motion: Analysis and Representation - Motion Estimation/Segmentation",
+
+}
+
+@INPROCEEDINGS{Simoncelli93d,
+  TOPIC=        "Visual Motion: Analysis and Representation - Estimation of Optic Flow",
+
+}
+
+@INPROCEEDINGS{Darrell93b,
+  TOPIC=        "Visual Motion: Analysis and Representation - Motion Estimation/Segmentation",
+  SUPERSEDES= "Darrell93c"
+
+}
+
+@INPROCEEDINGS{Heeger91a,
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Simoncelli-cvpr91,
+  TOPIC=        "Visual Motion: Analysis and Representation - Estimation of Optic Flow",
+  COPY=         "IEEE Computer Society",
+  RELATED="Original TR version|Simoncelli91a",
+}
+
+@INPROCEEDINGS{Adelson90,
+  TOPIC=        "",
+  DL-TITLE=     "EPIC Coder description & software",
+  DL-URL= 	"http://www.cns.nyu.edu/~eero/epic.html",
+
+}
+
+@INPROCEEDINGS{Simoncelli90b,
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Simoncelli89a,
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Simoncelli89b,
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Adelson89,
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Heeger89,
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Adelson87a,
+  TOPIC=        "",
+  OMIT= "true",
+
+}
+
+@INPROCEEDINGS{Adelson87,
+  TOPIC=        "Image Analysis and Representation - Orthogonal Multi-Scale Image Representations (Wavelets)",
+
+}
+
+%% -----------------------------------------------------------------
+%% Conference Abstracts
+
+% cosyne-16
+@INPROCEEDINGS{Ziemba16a,
+  TYPE=	"CONFABSTRACT",
+  RELATED= "Ziemba15c",
+  RELATED= "Freeman13",
+}
+
+@INPROCEEDINGS{Henaff16a,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Berardino16a,
+  TYPE=	"CONFABSTRACT",
+  RELATED= "Laparra16a",	
+}
+
+
+% sfn-15
+@INPROCEEDINGS{Ziemba15c,
+  TYPE=	"CONFABSTRACT",
+  RELATED= "Ziemba15b",
+  RELATED= "Freeman13",
+}
+
+@INPROCEEDINGS{Goris15a,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Rabinowitz15b,
+  TYPE=	"CONFABSTRACT",
+RELATED= "Rabinowitz14a",
+}
+
+@INPROCEEDINGS{Ziemba15b,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Zaharia15a,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Chubb15a,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Ganmor15a,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Ziemba15a,
+  TYPE=	"CONFABSTRACT",
+  RELATED= "Mcdermott12",
+  RELATED= "Freeman10",
+}
+
+@INPROCEEDINGS{Rabinowitz15a,
+  TYPE=	"CONFABSTRACT",
+  RELATED="Goris13",
+  RELATED= "Vidne11",
+  RELATED="Pillow08",
+}
+
+@INPROCEEDINGS{Zaharia14a,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Pagan14b,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Goris14a,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Freeman14a,
+  TYPE=	"CONFABSTRACT",
+  RELATED= "Freeman13",
+  RELATED= "Freeman10",
+}
+
+@INPROCEEDINGS{Norton14a,
+  TYPE=	"CONFABSTRACT",
+  RELATED= "Rajashekar09a",
+  RELATED= "Wang05e",
+}
+
+@INPROCEEDINGS{Rabinowitz14b,
+  TYPE=	"CONFABSTRACT",
+  DL-TITLE= "Full submitted abstract (pdf, with figs)",
+  DL-URL = 	"http://www.cns.nyu.edu/pub/lcv/rabinowitz14b-abstract.pdf",
+  RELATED= "Goris13",	
+}
+@INPROCEEDINGS{Pagan14a,
+  TYPE=	"CONFABSTRACT",
+  DL-TITLE= "Full submitted abstract (pdf, with figs)",
+  DL-URL = 	"http://www.cns.nyu.edu/pub/lcv/pagan14a-abstract.pdf",
+ RELATED= "Pagan14b",
+}
+@INPROCEEDINGS{Rabinowitz14a,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Ziemba13a,
+  TYPE=	"CONFABSTRACT",
+  RELATED = "Freeman13",	
+}
+@INPROCEEDINGS{Freeman13c,
+  TYPE=	"CONFABSTRACT",
+  RELATED = "Freeman13",	
+}
+@INPROCEEDINGS{Goris13b,
+  TYPE=	"CONFABSTRACT",
+  RELATED = "Goris12a",	
+  RELATED = "Vidne11",
+  RELATED = "Pillow08",
+}
+
+@INPROCEEDINGS{Freeman13b,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Goris13a,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Freeman13a,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Mcdermott12b,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Vintch12b,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Freeman12b,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Ziemba12b,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Goris12b,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Vintch12a,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Mcdermott12a,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Karklin12a,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Ziemba12a,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Goris12a,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Ganguli12a,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Freeman12a,
+  TYPE=	"CONFABSTRACT",
+}
+
+
+@INPROCEEDINGS{Ziemba11a,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Vintch11a,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Freeman11b,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Ekanadham11b,
+  TYPE=	"CONFABSTRACT",
+  RELATED="Ekanadham11",
+  RELATED="Ekanadham11a",
+}
+@INPROCEEDINGS{Karklin11a,
+  TYPE=	"CONFABSTRACT",
+  DL-TITLE=     "Poster (pdf)",
+  DL-URL=       "http://www.cns.nyu.edu/pub/lcv/karklin11a-poster.pdf",
+}
+@INPROCEEDINGS{Mcdermott11a,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Freeman11a,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Doi11a,
+  TYPE=	"CONFABSTRACT",
+}
+
+
+@INPROCEEDINGS{Mcdermott11b,
+  TYPE=	"CONFABSTRACT",
+}
+@INPROCEEDINGS{Mcdermott11c,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Vintch10a,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Ekanadham10a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Freeman10c,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Ganguli10b,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Freeman10b,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Vidne10a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Stocker10a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Doi10b,
+  TYPE=	"CONFABSTRACT",
+  DL-TITLE=   "Supplementary Materials",
+  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/doi10b-supp.pdf",
+
+}
+
+@INPROCEEDINGS{Girshick10a,
+  TYPE=	"CONFABSTRACT",
+  DL-TITLE=   "Supplementary Materials",
+  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/girshick10a-supp.pdf",
+
+}
+
+@INPROCEEDINGS{Mcdermott10a,
+  TYPE=	"CONFABSTRACT",
+  DL-TITLE=   "Supplementary Materials",
+  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/mcdermott10a-supp.pdf",
+
+}
+
+@INPROCEEDINGS{Doi10a,
+  TYPE=	"CONFABSTRACT",
+  DL-TITLE=   "Supplementary Materials",
+  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/doi10a-supp.pdf",
+
+}
+
+@INPROCEEDINGS{Ganguli10a,
+  TYPE=	"CONFABSTRACT",
+  DL-TITLE=   "Supplementary Materials",
+  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/ganguli10a-supp.pdf",
+
+}
+
+@INPROCEEDINGS{Freeman10a,
+  TYPE=	"CONFABSTRACT",
+  DL-TITLE=   "Supplementary Materials",
+  DL-URL=     "http://www.cns.nyu.edu/pub/lcv/freeman10a-supp.pdf",
+
+}
+
+@INPROCEEDINGS{Pillow09a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Stocker09a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Girshick09a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Vidne09a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Ahmadian09a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Lalor09a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Doi08b,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Ahmadian08a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Stocker08b,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Mcdermott08a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Pillow08b,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Series08a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Stocker08a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Pillow08a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Hedges08a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Series08a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Pillow08b,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Mcdermott08a,
+  TYPE=	"CONFABSTRACT",
+  RELATED="Visual texture model|Portilla99",
+}
+
+@INPROCEEDINGS{Doi08a,
+  TYPE=	"CONFABSTRACT",
+
+}
+
+@INPROCEEDINGS{Pillow07b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Stocker07b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Hedges07a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Majaj07a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Pillow07a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Movshon06a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Simoncelli06a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Stocker06a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Pillow06a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Hammond06a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Raphan06a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Rust05b,
+  TYPE=	"CONFABSTRACT", 
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Pillow05b,
+  TYPE= "CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Stocker05a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Wang05d,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+  DL-TITLE=     "Slides from talk",
+  DL-URL=       "http://www.cns.nyu.edu/~eero/SLIDES/vss-wang-05-slides.pdf",
+  COPY=         "IEEE Signal Processing Society",
+  RELATED="Short article|Wang04a",
+}
+
+@INPROCEEDINGS{Rust05a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+
+}
+
+@INPROCEEDINGS{Pillow05a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Stocker05b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Paninski05a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Rust04b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Pillow04b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Pillow04a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Rust04a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Stocker04a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Perception",
+
+}
+
+@INPROCEEDINGS{Pillow03c,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Rust03b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+  RELATED="CNS*03 article|Rust03a",
+  RELATED="Book chapter on neural characterization|Simoncelli03c",
+}
+
+@INPROCEEDINGS{Paninski03d,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+  RELATED="CNS*02 article|Pilow02a",
+  RELATED="Book chapter on neural characterization|Simoncelli03c",
+}
+
+@INPROCEEDINGS{Rust02b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Physiology",
+  DL-TITLE=     "Poster (pdf)",
+  DL-URL=       "http://www.cns.nyu.edu/~rust/NR_SFN2002_poster.pdf",
+
+}
+
+@INPROCEEDINGS{Rust02a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Physiology",
+
+}
+
+@INPROCEEDINGS{Schwartz01a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Statistical Properties of Natural Images - Characterization of Neurons with Stochastic Stimuli",
+  RELATED="NIPS article|Schwartz01b",
+  RELATED="Book chapter|Simoncelli03c",
+}
+
+@INPROCEEDINGS{Wainwright01b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+  OMIT= "true",	
+
+}
+
+@INPROCEEDINGS{Simoncelli99c,
+  TYPE=	"CONFABSTRACT",
+}
+
+@INPROCEEDINGS{Schwartz99a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Statistical Properties of Natural Images - Relationship to Neurobiology (the 'Efficient Coding' Hypothesis)",
+  RELATED="nips*98|Simoncelli98d",
+  RELATED="Nature Neuroscience article|Schwartz01",
+}
+
+@INPROCEEDINGS{Wainwright99a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Statistical Properties of Natural Images - Relationship to Neurobiology (the 'Efficient Coding' Hypothesis)",
+  DL-TITLE=     "Presentation slides (331k, pdf)"
+  DL-URL=       "http://www.cns.nyu.edu/~eero/SLIDES/wainwright99a-slides.pdf",
+  RELATED="Book chapter|Wainwright00c",
+}
+
+@INPROCEEDINGS{Mikaelian98,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Simoncelli98f,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Simoncelli98a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Statistical Properties of Natural Images - Relationship to Neurobiology (the 'Efficient Coding' Hypothesis)",
+  DL-TITLE=     "Presentation slides (331k, pdf)",
+  DL-URL=       "http://www.cns.nyu.edu/~eero/SLIDES/simoncelli98a-slides.pdf",
+  RELATED="Nature Neuroscience article|Schwartz01",
+}
+
+@INPROCEEDINGS{Simoncelli97c,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Schrater97a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+  RELATED="Nature article|Schrater00",
+}
+
+@INPROCEEDINGS{Schrater96,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+  RELATED="Nature Neuroscience article|Schrater99",
+}
+
+@INPROCEEDINGS{Simoncelli96b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Physiology",
+  DL-TITLE=     "Presentation slides (274k, pdf)",
+  DL-URL=       "http://www.cns.nyu.edu/~eero/SLIDES/simoncelli96b-slides.pdf",
+  RELATED="Model description|Simoncelli96",
+}
+
+@INPROCEEDINGS{Schrater95,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+  RELATED="Vision Research article|Schrater97",
+}
+
+@INPROCEEDINGS{Farid95,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Simoncelli94a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Physiology",
+  DL-TITLE=     "Presentation slides (290k, pdf)",
+  DL-URL=       "http://www.cns.nyu.edu/~eero/SLIDES/simoncelli94a-slides.pdf",
+  RELATED="Vision Research article|Simoncelli96",
+}
+
+@INPROCEEDINGS{Farid94a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Perception",
+
+}
+
+@INPROCEEDINGS{Schrater94a,
+  TYPE="CONFABSTRACT",
+  TOPIC=        "",
+  COPY=         "Elsevier Science Ltd.",
+  RELATED="Vision Research article|Schrater97",
+}
+
+@INPROCEEDINGS{Darrell93e,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Simoncelli93c,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Physiology",
+  DL-TITLE=     "Presentation slides (224k, pdf)",
+  DL-URL=       "http://www.cns.nyu.edu/~eero/SLIDES/simoncelli93c-slides.pdf",
+  RELATED="Vision Research article|Simoncelli96",
+}
+
+@INPROCEEDINGS{Darrell93a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Visual Motion: Analysis and Representation - Motion Estimation/Segmentation",
+
+}
+
+@INPROCEEDINGS{Simoncelli92b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Visual Motion: Analysis and Representation - Modeling Perception",
+  DL-TITLE=     "Presentation slides (247k, pdf)",
+  DL-URL=       "http://www.cns.nyu.edu/~eero/SLIDES/simoncelli92b-slides.pdf",
+  COPY=         "Macmillan Magazines.Ltd.",
+  RELATED="Nature Neuroscience article|Weiss02",
+}
+
+@INPROCEEDINGS{Darrell92,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Visual Motion: Analysis and Representation - Motion Estimation/Segmentation",
+
+}
+
+@INPROCEEDINGS{Simoncelli91b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "Visual Motion: Analysis and Representation - Estimation of Optic Flow",
+  DL-TITLE=     "Presentation slides (118k, pdf)",
+  DL-URL=       "http://www.cns.nyu.edu/~eero/SLIDES/simoncelli91b-slides.pdf",
+  RELATED="|Simoncelli-phd",
+}
+
+@INPROCEEDINGS{Simoncelli90c,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Adelson90b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+  RELATED="QMF pyramids|Simoncelli90",
+  RELATED="Steerable pyramids|Simoncelli91",
+}
+
+@INPROCEEDINGS{Simoncelli90a,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Freeman89b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Adelson89,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Adelson88,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Simoncelli87,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Adelson87b,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+@INPROCEEDINGS{Adelson87c,
+  TYPE=	"CONFABSTRACT",
+  TOPIC=        "",
+
+}
+
+%% -----------------------------------------------------------------
+%% Tech reports
+
+@TECHREPORT{Rabinowitz15c,
+}
+
+@TECHREPORT{Ganguli12b,
+  RELATED="Ganguli PhD Thesis|Ganguli-phd",
+  RELATED="Bayesian readout using optimally efficient populations|Ganguli12a",
+  RELATED="Initial publication (NIPS*2010)|Ganguli10c",
+  DL-TITLE=     "Official listing in ArXiv Repository",
+  DL-URL=       "http://arxiv.org/abs/1209.5006",
+}
+
+@TECHREPORT{Raphan09b,
+  TOPIC=        "",
+  DL-TITLE=     "Courant TechReport Repository",
+  DL-URL=       "http://cs.nyu.edu/csweb/Research/TechReports/reports.html",
+  RELATED="NIPS*06 paper|Raphan06b",
+  RELATED="TR on learning a general form of nonparametric Bayes estimator|Raphan07b",
+  RELATED="Raphan PhD thesis|Raphan-phd",
+}
+
+@TECHREPORT{Lyu08a,
+  TOPIC=        "",
+  DL-TITLE=     "Courant TechReport Repository",
+  DL-URL=       "http://cs.nyu.edu/csweb/Research/TechReports/reports.html",
+
+}
+
+@TECHREPORT{Raphan07b,
+  TOPIC=        "",
+  DL-TITLE=     "Courant TechReport Repository",
+  DL-URL=       "http://cs.nyu.edu/csweb/Research/TechReports/reports.html",
+
+}
+
+@TECHREPORT{Hammond05c,
+  TOPIC=        "Image Analysis and Representation - Orientation Analysis / Derivative Filter Design",
+  DL-TITLE=     "Courant TechReport Repository",
+  DL-URL=       "http://cs.nyu.edu/csweb/Research/TechReports/reports.html",
+
+}
+
+@TECHREPORT{Portilla02a,
+  TOPIC=        "Statistical Properties of Natural Images - Denoising",
+  DL-TITLE=     "Courant TechReport Repository",
+  DL-URL=       "http://cs.nyu.edu/csweb/Research/TechReports/reports.html",
+  RELATED="Revised and shortened version|Portilla03",
+}
+
+@TECHREPORT{Buccigrossi97a,
+  TOPIC=        "",
+  DL-TITLE=     "Brief Description & Software",
+  DL-URL= 	"http://www.cns.nyu.edu/~eero/EPWIC/",
+
+}
+
+@TECHREPORT{Portilla98,
+  TOPIC=        "",
+
+}
+
+@TECHREPORT{Mendels97a,
+  TOPIC=        "",
+
+}
+
+@TECHREPORT{Teo96,
+  TOPIC=        "Image Analysis and Representation - Rendering Using Illumination Bases",
+
+}
+
+@TECHREPORT{Mendels96,
+  TOPIC=        "",
+
+}
+
+@TECHREPORT{Thomas95,
+  TOPIC=        "",
+
+}
+
+@TECHREPORT{Thomas94c,
+  TOPIC=        "",
+
+}
+
+@TECHREPORT{Provan94,
+  TOPIC=        "",
+
+}
+
+@TECHREPORT{Simoncelli93b,
+  TOPIC=        "",
+
+}
+
+@TECHREPORT{Simoncelli93a,
+  TOPIC=        "Visual Motion: Analysis and Representation - Estimation of Optic Flow",
+
+}
+
+@TECHREPORT{Darrell93c,
+  TOPIC=        "Visual Motion: Analysis and Representation - Motion Estimation/Segmentation",
+
+}
+
+@TECHREPORT{Simoncelli91c,
+  TOPIC=        "",
+
+}
+
+@TECHREPORT{Simoncelli91a,
+  TOPIC=        "",
+
+}
+
+@TECHREPORT{Heeger92-obvius,
+  TOPIC=	        "",
+  SUPERSEDES= "Heeger89-obvius"
+
+}
+
+@TECHREPORT{Heeger89-obvius,
+  TOPIC=        "",
+
+}
+
+@TECHREPORT{Simoncelli88,
+  TOPIC=        "",
+
+}
+
