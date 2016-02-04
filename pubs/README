@@ -1,5 +1,13 @@
-## This info file describes the files for the dynamic publication
-## pages at lcv.
+To install bib2php just unpack the tar file in a directory that your webserver can see and change the following entries in pubs/bib2php.conf:
+  + you probably want to set caching to 'off' at least initially.  If you turn it on you'll need to set the directory where the cached files are saved in 'cacheloc'.
+  + bibtex - file and path to your bibtex file
+  + aux - file and path to your bibaux file
+  + abstract - location for abstract files. File names are expected to be key-abstract.suffix.  Key is the bibtex key for the document and suffix is either txt or html.
+  + pdf - base URL of directory containing all PDF files.
+  + base1 - change this to the URL where you placed publications.php
+  + lcvheader - change to 'off'
+
+## Here's a description of the files in bib2php
 
 Top directory
 + publications.php - This is the file that generates the publications page.
@@ -16,15 +24,11 @@ Subdirectory (hardcoded as pubs/)
   AUTHOR - File that contains the mapping from author names to URLs.
   JOURNAL - File that contains the mapping from journal names to URLs.
   BASE1 - The base URL that the publications will be located at.
-  BASE2 - The base path for the publications.
   The variables BIBTEX, AUX, ABSTRACT, AUTHOR, and JOURNAL are assumed to be 
   in the subdirectory pub/.
-+ bib2php-sty.php - File used to store style related variables. Currently only 
-  holds variables for the color of the separator bars and the color of the 
-  text on those bars.
 + freshenPubs.php - PHP script that updates cached versions of publication 
   pages stored in pubs/CACHE.
-+ journal.txt - File that contains the mapping from journal names to URLs.
++ journalURL.txt - File that contains the mapping from journal names to URLs.
 + lcvheader_dynamic.html - Code used to create the LCV header with selection 
   boxes.
 + makeAbs.php - This file generates the abstract pages dynamically.
