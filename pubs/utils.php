@@ -1,4 +1,6 @@
 <?php
+// utils.php contains utility functions for bib2php
+// written by Rob Young and Eero Simoncelli
 
 class Ref {
   // system vars

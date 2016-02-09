@@ -1,5 +1,8 @@
 <?php
 
+// makeAbs.php is a script that makes the abstract pages
+// written by Rob Young and Eero Simoncelli
+
 $maindir = "./";
 
 $targLoc = $_GET['loc'];

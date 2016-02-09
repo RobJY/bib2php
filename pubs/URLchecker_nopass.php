@@ -1,4 +1,6 @@
 <?php
+// URLchecker_nopass.php checks the links on an associated page
+// written by Rob Young
 
 echo "<h1>CNS Openhouse Link Checker</h1><hr>";
 

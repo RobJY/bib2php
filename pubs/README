@@ -1,8 +1,13 @@
-To install bib2php just unpack the tar file in a directory that your webserver can see and change the following entries in pubs/bib2php.conf:
-  + you probably want to set caching to 'off' at least initially.  If you turn it on you'll need to set the directory where the cached files are saved in 'cacheloc'.
+To install bib2php just unpack the tar file in a directory that your webserver
+can see and change the following entries in pubs/bib2php.conf:
+  + you probably want to set caching to 'off' at least initially.  If you turn
+    it on you'll need to set the directory where the cached files are saved in
+    'cacheloc'.
   + bibtex - file and path to your bibtex file
   + aux - file and path to your bibaux file
-  + abstract - location for abstract files. File names are expected to be key-abstract.suffix.  Key is the bibtex key for the document and suffix is either txt or html.
+  + abstract - location for abstract files. File names are expected to be 
+    key-abstract.suffix.  Key is the bibtex key for the document and suffix is 
+either txt or html.
   + pdf - base URL of directory containing all PDF files.
   + base1 - change this to the URL where you placed publications.php
   + lcvheader - change to 'off'

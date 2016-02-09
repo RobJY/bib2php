@@ -1,4 +1,7 @@
 <?php
+// This is the main page for the bib2php system.  Please see pubs/README for 
+//   more details.
+// written by Rob Young and Eero Simoncelli
 // This file assumes that publications.php and bib2php.conf are in the 
 //    base directory.
 
