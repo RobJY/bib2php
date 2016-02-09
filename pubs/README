@@ -1,6 +1,10 @@
 bib2php creates a PHP page from a BibTeX file.  It creates a main page that can
 be sorted by year, document type or first author, and can be filtered by 
-document type.  You can see an example of it in use at:
+document type.  It also creates an abstract page with more information about 
+each document.  You can add information like links to related and superseded 
+documents with the use of a bibaux file that uses syntax similar to a BibTeX 
+file.
+You can see an example of it in use at:
 http://www.cns.nyu.edu/~lcv/html_public/publications.php
 
 Written by Rob Young and Eero Simoncelli
