@@ -1,3 +1,11 @@
+bib2php creates a PHP page from a BibTeX file.  It creates a main page that can
+be sorted by year, document type or first author, and can be filtered by 
+document type.  You can see an example of it in use at:
+http://www.cns.nyu.edu/~lcv/html_public/publications.php
+
+Written by Rob Young and Eero Simoncelli
+
+
 To install bib2php just unpack the tar file in a directory that your webserver
 can see and change the following entries in pubs/bib2php.conf:
   + you probably want to set caching to 'off' at least initially.  If you turn
@@ -13,7 +21,6 @@ either txt or html.
   + lcvheader - change to 'off'
 
 ## Here's a description of the files in bib2php
-
 Top directory
 + publications.php - This is the file that generates the publications page.
   It does this based on the user's radio button and check box selections.  It 
