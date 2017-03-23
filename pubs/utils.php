@@ -784,6 +784,7 @@ function cleanStr($instr,$cbflag){
   return $instr;
 }
 
+// parses file
 function bibtex2array(&$allRefs,&$allLoc,$bibfile,$ini_vars,$targLoc){
   $fp = fopen($bibfile,"r"," ,") or die("bibtex2array:Error opening file $bibfile");
   $line = trim(fgets($fp));
@@ -826,9 +827,7 @@ function bibtex2array(&$allRefs,&$allLoc,$bibfile,$ini_vars,$targLoc){
     }
     $line=trim(fgets($fp));
   }
-  $Nrefs = count($allRefs);
-  fclose($fp);
-  
+
   return $Nrefs;
 }
 
@@ -879,12 +878,25 @@ function getLocArray($inarr){
   return($outarr);
 }
 
-function makePage($filename,$mode){
+function authorInList($name, $list){
+  // check list for name and return true if found
+  //$name = str_replace("%20", " ", trim($name));
+  $inList = False;
+  foreach ($list as $testName){
+    if (strcmp($testName, $name) === 0)
+      $inList = True;
+  }
+  
+  return $inList;
+}
+
+function makePage($filename, $mode, $author){
   // makePage.php is run in one of two modes: show or cache.  In cache 
   //   it checks to see if any supporting files have been updated since the 
   //   existing cached page was created and makes a new cached page if so.
   //   If it's run in show mode it creates a page and displays it.
-  
+  // $author parameter is author name that is used for mode anyauthor
+
   // This file assumes that bib2php.conf is in the base directory.
 
   //include("pubs/bib2php-sty.php");
@@ -911,6 +923,8 @@ function makePage($filename,$mode){
   // set variables based on filename
   if(strpos($filename,"date")){
     $smethod = "date";
+  }elseif(strpos($filename,"anyauthor")){
+    $smethod = "anyauthor";
   }elseif(strpos($filename,"author")){
     $smethod = "author";
   }elseif(strpos($filename,"type")){
@@ -957,7 +971,7 @@ function makePage($filename,$mode){
     }
   }
   $Nrefs = count($allRefs); 
-  
+
   // remove refs based on aux file and checkboxes
   $alltypes = array();
   $newRefs = array();
@@ -1061,76 +1075,89 @@ function makePage($filename,$mode){
   echo("   </HEAD>\n");
   echo("   <BODY>\n");
   echo("<a name=\"top\"> </a>\n");
+  
   if(strcmp($lcvheader,"on") === 0){
-    $tmpstr = "utils/lcvheader_dynamic.html";
-    echo(file_get_contents($tmpstr));
-    echo("<div id=\"pagetitle\">Selected Online Publications</div>\n");
-  }
-  echo("<form name=\"sortm\" action=\"publications.php\" method=\"get\"><br>");
-  echo("<table>");
-  echo("<tr><td colspan=2>Sort by:&nbsp;&nbsp; \n");
-
-  $Dcheck="";    $Tcheck="";    $Acheck="";    $TOPcheck="";   
-  if(empty($smethod) || strcmp($smethod,"date") === 0)
-    $Dcheck="checked";
-  elseif(strcmp($smethod,"author") === 0)
-    $Acheck="checked";
-  elseif(strcmp($smethod,"type") === 0)
-    $Tcheck="checked";
-  elseif(strcmp($smethod,"topic") === 0)
-    $TOPcheck="checked";
-  else{
-    $Dcheck="checked";
-    echo "Error: invalid sort method: $smethod";
-  }
-
-  echo("<input type=\"radio\" name=\"smethod\" value=\"date\" onClick=\"sortm.submit();\" $Dcheck>Year\n");
-  echo("&nbsp;&nbsp;&nbsp;\n");
-  echo("<input type=\"radio\" name=\"smethod\" value=\"type\" onClick=\"sortm.submit();\" $Tcheck>Type\n");
-  echo("&nbsp;&nbsp;&nbsp;\n");
-  echo("<input type=\"radio\" name=\"smethod\" value=\"author\" onClick=\"sortm.submit();\" $Acheck>First Author\n");
-
-  echo("</td></tr>");
-  echo("<tr><td valign=top>Exclude:&nbsp;&nbsp;</td><td>");
-
-  $types = array_keys($ini_vars['type_mappings']);
-  // pull exgroup types out of $types array.
-  $tmparr = explode("|",$exgroup);
-  $exgroupTitle = $tmparr[0];
-  $exgroup = explode(",",$tmparr[1]);  
-
-  $subtypes = array_values(array_diff($types,$exgroup));
-  for($i=0; $i<count($subtypes); $i++){
-    if(!in_array($subtypes[$i],$unexcludable)){
-      $name=$subtypes[$i];
-      $checked="";
-      if(in_array($name,$excludeArr))
-	$checked="checked";
-      $tmparr = explode("|",$ini_vars['type_mappings'][$name]);
-      $title = $tmparr[0];
-      echo("<nobr><input type=\"checkbox\" name=\"$name\" onClick=\"sortm.submit();\" $checked>\n");
-      echo $title . "</nobr>&nbsp;&nbsp;&nbsp;&nbsp;\n";
+    include("utils/lcvheader_dynamic.html");
+    if(strcmp($smethod, "anyauthor") === 0){
+      if(strpos($author, "Kiorpes") !== false){
+        echo("<div id=\"pagetitle\">Kiorpes Lab Publications</div><P>\n");
+      }elseif(strpos($author, "Movshon") !== false){
+        echo("<div id=\"pagetitle\">Movshon Lab Publications</div><P>\n");
+      }
+    }else{
+      echo("<div id=\"pagetitle\">Selected Online Publications</div>\n");
     }
   }
-  // now make exgroup checkbox
-  //   decide if checked
-  if(count($exgroup) > 1){
-    $cond = 1;
-    foreach($exgroup as $value){
-      if(!in_array($value,$excludeArr))
-	$cond = 0;
+  // only show sorting and filtering options if not in mode 'anyauthor'
+  if(strcmp($smethod, "anyauthor") !== 0){
+    echo("<form name=\"sortm\" action=\"publications.php\" method=\"get\"><br>");
+    echo("<table>");
+    echo("<tr><td colspan=2>Sort by:&nbsp;&nbsp; \n");
+
+    $Dcheck="";    $Tcheck="";    $Acheck="";    $TOPcheck="";   
+    if(empty($smethod) || strcmp($smethod,"date") === 0)
+      $Dcheck="checked";
+    elseif(strcmp($smethod,"author") === 0)
+      $Acheck="checked";
+    elseif(strcmp($smethod,"anyauthor") === 0)
+      $Dcheck="checked";
+    elseif(strcmp($smethod,"type") === 0)
+      $Tcheck="checked";
+    elseif(strcmp($smethod,"topic") === 0)
+      $TOPcheck="checked";
+    else{
+      $Dcheck="checked";
+      echo "Error: invalid sort method: $smethod";
     }
+
+    echo("<input type=\"radio\" name=\"smethod\" value=\"date\" onClick=\"sortm.submit();\" $Dcheck>Year\n");
+    echo("&nbsp;&nbsp;&nbsp;\n");
+    echo("<input type=\"radio\" name=\"smethod\" value=\"type\" onClick=\"sortm.submit();\" $Tcheck>Type\n");
+    echo("&nbsp;&nbsp;&nbsp;\n");
+    echo("<input type=\"radio\" name=\"smethod\" value=\"author\" onClick=\"sortm.submit();\" $Acheck>First Author\n");
+
+    echo("</td></tr>");
+
+    echo("<tr><td valign=top>Exclude:&nbsp;&nbsp;</td><td>");
+
+    $types = array_keys($ini_vars['type_mappings']);
+    // pull exgroup types out of $types array.
+    $tmparr = explode("|",$exgroup);
+    $exgroupTitle = $tmparr[0];
+    $exgroup = explode(",",$tmparr[1]);  
+
+    $subtypes = array_values(array_diff($types,$exgroup));
+    for($i=0; $i<count($subtypes); $i++){
+      if(!in_array($subtypes[$i],$unexcludable)){
+        $name=$subtypes[$i];
+        $checked="";
+        if(in_array($name,$excludeArr))
+          $checked="checked";
+        $tmparr = explode("|",$ini_vars['type_mappings'][$name]);
+        $title = $tmparr[0];
+        echo("<nobr><input type=\"checkbox\" name=\"$name\" onClick=\"sortm.submit();\" $checked>\n");
+        echo $title . "</nobr>&nbsp;&nbsp;&nbsp;&nbsp;\n";
+      }
+    }
+    // now make exgroup checkbox
+    //   decide if checked
+    if(count($exgroup) > 1){
+      $cond = 1;
+      foreach($exgroup as $value){
+        if(!in_array($value,$excludeArr))
+          $cond = 0;
+      }
     
-    $checked = "";
-    if($cond)
-      $checked="checked";
-    echo("<nobr><input type=\"checkbox\" name=\"EXGROUP\" onClick=\"sortm.submit();\" $checked>\n");
-    echo $exgroupTitle . "</nobr>&nbsp;&nbsp;&nbsp;&nbsp;\n";
+      $checked = "";
+      if($cond)
+        $checked="checked";
+      echo("<nobr><input type=\"checkbox\" name=\"EXGROUP\" onClick=\"sortm.submit();\" $checked>\n");
+      echo $exgroupTitle . "</nobr>&nbsp;&nbsp;&nbsp;&nbsp;\n";
+    }
+  
+    echo("</td></tr></table>");
+    echo('</form><p>'."\n");
   }
-  
-  echo("</td></tr></table>");
-  echo('</form><p>'."\n");
-  
   // compute sorted index list based on method and print
   $vals2sort = array();
   switch ($smethod) {
@@ -1148,6 +1175,24 @@ function makePage($filename,$mode){
 	printDivider($tmpyear,$tmpyear,$i==0);
       }
       $newRefs[$i]->printSelf($basedir,$pdfdir,"main",NULL);
+    }
+    break;
+  case "anyauthor":
+    // make a new array that only contains elements with target author
+    $targAuthorRefs = array();
+    for($i=0;$i<$Nrefs;$i++){
+      if (authorInList($author, $newRefs[$i]->author2))
+        $targAuthorRefs[] = $newRefs[$i];
+    }
+    
+    $tmpyear = 0;
+    for($i=0; $i<count($targAuthorRefs); $i++){
+      if(trim($targAuthorRefs[$i]->year) != trim($tmpyear)){
+	$tmpyear = $targAuthorRefs[$i]->year;
+	printDivider($tmpyear, $tmpyear, $i==0);
+      }
+      if (authorInList($author, $targAuthorRefs[$i]->author2))
+      	 $targAuthorRefs[$i]->printSelf($basedir,$pdfdir,"main",NULL);
     }
     break;
   case "author":

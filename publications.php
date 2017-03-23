@@ -28,6 +28,7 @@ $cacheLoc = $ini_vars['bib2php_vars']['CACHELOC'];
 //$smethod = $_GET['smethod'];
 // if smethod not set, set defaults
 //if(strlen($smethod) == 0){
+$author = $_GET['author'];  // author variable for anyauthor mode
 if(!isset($_GET['smethod'])){
   $smethod = "date";
   // get list of types
@@ -66,7 +67,7 @@ $fullfilename = $cacheLoc . $filename;
 
 if(strcmp($caching,"off") === 0){
   // make and show page
-  makePage($filename,"show");
+  makePage($filename, "show", $author);
 }elseif(file_exists($fullfilename) && 
 	filemtime("pubs/" . $bibfile) < filemtime($fullfilename) && 
 	filemtime("pubs/" . $auxfile) < filemtime($fullfilename) && 
@@ -79,7 +80,7 @@ if(strcmp($caching,"off") === 0){
   include("$fullfilename");
 }else{
   // make page creates page and displays.
-  makePage($filename,"cache");
+  makePage($filename, "cache", $author);
 }
 
 ?>
