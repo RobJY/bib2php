@@ -458,8 +458,8 @@ function LcF2FsL($instr){
 }
 
 function loadStruct($line,$fp,&$EOEflag,&$tmpRef,$map,$targLoc,&$supersedeLoc){
-  if(strlen($line) > 0 && strpos($line,'=') !== false && $line{0} !== 'x' && 
-     $line{0} !== '*' && $line{0} !== '%'){
+  if(strlen($line) > 0 && strpos($line,'=') !== false && $line[0] !== 'x' && 
+     $line[0] !== '*' && $line[0] !== '%'){
 
     // get tag
     $linearr = explode("=",$line);
@@ -667,8 +667,8 @@ function read_entry_old($linein,$fp) {
   //   lines and remove comma and/or quotes.
   // else just return value after equal sign
   if(strpos($linein,',') !== false || strpos($linein,'"') !== false){
-    while($linein{strlen($linein)-1} != "," && 
-	  $linein{strlen($linein)-1} != '"'){
+    while($linein[strlen($linein)-1] != "," && 
+	  $linein[strlen($linein)-1] != '"'){
       $linein=trim(fgets($fp));
       $tmpstr=$tmpstr." ".$linein;
     }
@@ -789,7 +789,7 @@ function bibtex2array(&$allRefs,&$allLoc,$bibfile,$ini_vars,$targLoc){
   $line = trim(fgets($fp));
   while(!feof($fp)){
     if(strpos($line,"@") === 0 && strpos($line,"@COMMENT") === false){
-      $tmpRef=& new Ref();
+      $tmpRef = new Ref();
       $sublen = strpos($line,"{")-1;
       $tmpRef->type = strtoupper(substr($line,1,$sublen));  // to upper for imported bibtex
       // get type descriptor
@@ -810,7 +810,7 @@ function bibtex2array(&$allRefs,&$allLoc,$bibfile,$ini_vars,$targLoc){
       // while not at the end of the article
       while(strpos($line,"}") !== 0 && $EOEflag == 0){
 	// don't display x'ed, *'ed items or empty lines in bibtex
-	if(strlen($line) > 0 && $line{0} !== 'x' && $line{0} !== '*')
+	if(strlen($line) > 0 && $line[0] !== 'x' && $line[0] !== '*')
 	  $tmpRef->bibtex .= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$line."<br>";
 	loadStruct($line,$fp,$EOEflag,$tmpRef,NULL,NULL,$supersedeLoc);
 	$line=trim(fgets($fp));
@@ -880,6 +880,9 @@ function getLocArray($inarr){
 }
 
 function makePage($filename,$mode){
+  // TODO: remove after testing
+  $mode = "show";
+  // end TODO
   // makePage.php is run in one of two modes: show or cache.  In cache 
   //   it checks to see if any supporting files have been updated since the 
   //   existing cached page was created and makes a new cached page if so.
@@ -948,7 +951,7 @@ function makePage($filename,$mode){
 	if($j == 0){
 	  $allRefs[$i]->type = $typeArray[$j];
 	}else{
-	  $tmpRef =& new Ref();
+	  $tmpRef = new Ref();
 	  $tmpRef = $allRefs[$i];
 	  $tmpRef->type = $typeArray[$j];
 	  $allRefs[] = $tmpRef;
@@ -998,7 +1001,7 @@ function makePage($filename,$mode){
 	$allRefs[$i]->topic = $topics[0];
 	for($j=1;$j<count($topics);$j++){ //we already have one, so start i=1
 	  $vals2sort[] = $topics[$j];
-	  $tmpRef =& new Ref();
+	  $tmpRef = new Ref();
 	  $tmpRef = $allRefs[$i];
 	  $tmpRef->topic = $topics[$j];
 	  $allRefs[] = $tmpRef;
@@ -1469,6 +1472,7 @@ function makePage($filename,$mode){
   }
 
   if(strcmp($mode,"cache") === 0){
+    /* TODO: problem with cached, so commenting out for now
     $content = ob_get_contents();
     ob_end_flush();  // send to display before writing to file
                      //   This doesn't seem to make it any faster. Why?
@@ -1476,6 +1480,7 @@ function makePage($filename,$mode){
     $fp = fopen($tmpstr,"w");
     fwrite($fp,$content);
     fclose($fp);
+    */
   }
 }
 
