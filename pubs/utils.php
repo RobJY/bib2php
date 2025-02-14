@@ -774,7 +774,7 @@ function cleanStr($instr,$cbflag){
   $instr = str_replace("\`i","&igrave;",$instr);
   $instr = str_replace("\`o","&ograve;",$instr);
   $instr = str_replace("\`u","&ugrave;",$instr);
-  
+
   $instr = stripslashes($instr);
 
   if($cbflag == 1){
@@ -795,16 +795,18 @@ function bibtex2array(&$allRefs,&$allLoc,$bibfile,$ini_vars,$targLoc){
       // get type descriptor
       $last = strpos($line,"{")-1;
       if(array_key_exists($tmpRef->type,$ini_vars['type_mappings']))
-	$tmpRef->desc = $ini_vars['type_mappings'][$tmpRef->type];
+	      $tmpRef->desc = $ini_vars['type_mappings'][$tmpRef->type];
       else
-	$tmpRef->desc = $tmpRef->type;
+	      $tmpRef->desc = $tmpRef->type;
       
       $locStart = strpos($line,"{");
       $locEnd = strpos($line,",");
+      echo("$line<br>");
       $tmpRef->loc = substr($line,$locStart+1,$locEnd-($locStart+1));
-
+      echo("** loc **");
+      echo($tmpRef->loc);
       $tmpRef->bibtex .= $line."<br>";
-      
+      echo($tmpRef->bibtex);      
       $line=trim(fgets($fp));
       $EOEflag = 0;
       // while not at the end of the article
@@ -821,7 +823,7 @@ function bibtex2array(&$allRefs,&$allLoc,$bibfile,$ini_vars,$targLoc){
       }
       // add all references now
       // we will remove references after reading aux file
-      $allRefs[]=&$tmpRef;
+      $allRefs[]=$tmpRef;
       $allLoc[] = $tmpRef->loc;
     }
     $line=trim(fgets($fp));
@@ -829,6 +831,14 @@ function bibtex2array(&$allRefs,&$allLoc,$bibfile,$ini_vars,$targLoc){
   $Nrefs = count($allRefs);
   fclose($fp);
   
+  for($i=0;$i<$Nrefs;$i++){
+    echo($allRefs[$i]->loc);
+    echo("<br>");
+  }
+
+
+
+
   return $Nrefs;
 }
 
@@ -880,9 +890,6 @@ function getLocArray($inarr){
 }
 
 function makePage($filename,$mode){
-  // TODO: remove after testing
-  $mode = "show";
-  // end TODO
   // makePage.php is run in one of two modes: show or cache.  In cache 
   //   it checks to see if any supporting files have been updated since the 
   //   existing cached page was created and makes a new cached page if so.
@@ -960,38 +967,54 @@ function makePage($filename,$mode){
     }
   }
   $Nrefs = count($allRefs); 
+  echo("flag 1: $Nrefs <br>");
   
   // remove refs based on aux file and checkboxes
+  /* TODO: remove for testing; we lose all the references in here */
   $alltypes = array();
   $newRefs = array();
   $newLoc = array();
   for($i=0;$i<$Nrefs;$i++){
     $pullFlag = 0;
+    /* TODO: fix omit and other reference parsing issues
+             they're all getting set to omit = true
+    echo("omit: " . $allRefs[$i]->omit. "<br>");
     if(strcmp($allRefs[$i]->omit,"true") == 0){
+      echo("pullflag 1<br>");
       $pullFlag = 1;
     }
+    */
     if($pullFlag == 0 && in_array("SUPER",$excludeArr)){
       $tmparr = explode("|",$superseded);
       if(in_array($allRefs[$i]->loc,$tmparr)){
-	$pullFlag = 1;
+        echo("pullflag 2<br>");
+	      $pullFlag = 1;
       }
     }
     if($pullFlag == 0 && in_array($allRefs[$i]->type,$excludeArr)){
+      echo("pullflag 3<br>");
       $pullFlag = 1;
     }
+    echo("pullFlag: $pullFlag <br>");
     if($pullFlag == 0){
       $alltypes[] = $allRefs[$i]->type;
       $newRefs[] = $allRefs[$i];
       $newLoc[] = $allLoc[$i];
     }
   }
-
+  // TODO: nothing is matching above, so we're losing all the refs
+  echo("flag 1.0: " . count($alltypes) . " : " . count($newRefs) . " : " . count($allLoc) . "<br>");
+  echo("flag 1.1: $Nrefs" . "<br>");
+  
   $allRefs = array();
   $allRefs = $newRefs;
   $allLoc = array();
   $allLoc = $newLoc;
   $Nrefs = count($allRefs); 
-  
+  echo("flag2: $Nrefs");
+  echo("flag 2.0: " . count($alltypes) . " : " . count($newRefs) . " : " . count($allLoc) . "<br>");
+  echo("flag 2.1: $Nrefs" . "<br>");  /* end remove for testing */
+
   // add references with multiple topics if sorting method is by topic
   if(strcmp($smethod,"topic") == 0){
     for($i=0;$i<$Nrefs;$i++){
@@ -1052,7 +1075,6 @@ function makePage($filename,$mode){
   header('Last-Modified: ' . gmdate("D, d M Y H:i:s") . ' GMT');
   header('Cache-Control: no-store, no-cache, must-revalidate');
   header('Cache-Control: post-check=0, pre-check=0', false);
-
   ob_start();           // put output in buffer
   
   echo("<html><head>\n");
@@ -1063,6 +1085,7 @@ function makePage($filename,$mode){
   echo("<link rel=\"stylesheet\" href=\"utils/pubs.css\" type=\"text/css\">\n");
   echo("   </HEAD>\n");
   echo("   <BODY>\n");
+  
   echo("<a name=\"top\"> </a>\n");
   if(strcmp($lcvheader,"on") === 0){
     $tmpstr = "utils/lcvheader_dynamic.html";
@@ -1095,6 +1118,7 @@ function makePage($filename,$mode){
 
   echo("</td></tr>");
   echo("<tr><td valign=top>Exclude:&nbsp;&nbsp;</td><td>");
+  echo("*** flag 1 ***");
 
   $types = array_keys($ini_vars['type_mappings']);
   // pull exgroup types out of $types array.
@@ -1108,21 +1132,23 @@ function makePage($filename,$mode){
       $name=$subtypes[$i];
       $checked="";
       if(in_array($name,$excludeArr))
-	$checked="checked";
+	      $checked="checked";
       $tmparr = explode("|",$ini_vars['type_mappings'][$name]);
       $title = $tmparr[0];
       echo("<nobr><input type=\"checkbox\" name=\"$name\" onClick=\"sortm.submit();\" $checked>\n");
       echo $title . "</nobr>&nbsp;&nbsp;&nbsp;&nbsp;\n";
     }
   }
+  echo("*** flag 2 ***");
   // now make exgroup checkbox
   //   decide if checked
   if(count($exgroup) > 1){
     $cond = 1;
     foreach($exgroup as $value){
       if(!in_array($value,$excludeArr))
-	$cond = 0;
+      	$cond = 0;
     }
+    echo("*** flag 3 ***");
     
     $checked = "";
     if($cond)
@@ -1130,9 +1156,11 @@ function makePage($filename,$mode){
     echo("<nobr><input type=\"checkbox\" name=\"EXGROUP\" onClick=\"sortm.submit();\" $checked>\n");
     echo $exgroupTitle . "</nobr>&nbsp;&nbsp;&nbsp;&nbsp;\n";
   }
-  
+  echo("*** flag 4 ***");
+
   echo("</td></tr></table>");
   echo('</form><p>'."\n");
+  echo("*** flag 5 ***");
   
   // compute sorted index list based on method and print
   $vals2sort = array();
@@ -1140,6 +1168,8 @@ function makePage($filename,$mode){
   case "date": default:
     $allyears = array();
     for($i=0;$i<$Nrefs;$i++){
+      // TODO: year is also parsed wrong
+      echo($newRefs[$i]->year);
       $allyears[] = trim($newRefs[$i]->year);
     }
     $uallyears = array_unique($allyears);
@@ -1147,11 +1177,12 @@ function makePage($filename,$mode){
     $tmpyear = 0;
     for($i=0;$i<$Nrefs;$i++){
       if(trim($newRefs[$i]->year) != trim($tmpyear)){
-	$tmpyear = $newRefs[$i]->year;
-	printDivider($tmpyear,$tmpyear,$i==0);
+	      $tmpyear = $newRefs[$i]->year;
+	      printDivider($tmpyear,$tmpyear,$i==0);
       }
       $newRefs[$i]->printSelf($basedir,$pdfdir,"main",NULL);
     }
+    echo("*** flag 6 ***");
     break;
   case "author":
     for($i=0;$i<$Nrefs;$i++){
@@ -1171,27 +1202,27 @@ function makePage($filename,$mode){
     $start = 0;
     for($i=0;$i<count($keys);$i++){
       if($i == 0)
-	$start = 0;
+	      $start = 0;
       else
-	$start = $keys[$i];
+	      $start = $keys[$i];
       if($i == count($keys)-1)
-	$end = count($vals2sort);
+	      $end = count($vals2sort);
       else
-	$end = $keys[$i+1];
+	      $end = $keys[$i+1];
       $tmparr = array_slice($raw_keys,$start,$end-$start);
       $datearr = array();
       for($j=0;$j<count($tmparr);$j++){
-	$datearr[] = $newRefs[$tmparr[$j]]->dateNum;
+	      $datearr[] = $newRefs[$tmparr[$j]]->dateNum;
       }
       arsort($datearr);
       $date_keys = array_keys($datearr);
       // write headers
       for($j=0;$j<count($tmparr);$j++){
-	if($j == 0){
-	  $tmpauth = $newRefs[$tmparr[$date_keys[$j]]]->authorPrint;
-	  printDivider($tmpauth,$tmpauth,$i==0);
-	}
-	$newRefs[$tmparr[$date_keys[$j]]]->printSelf($basedir,$pdfdir,"main",NULL);
+	      if($j == 0){
+	        $tmpauth = $newRefs[$tmparr[$date_keys[$j]]]->authorPrint;
+	        printDivider($tmpauth,$tmpauth,$i==0);
+	      }
+	      $newRefs[$tmparr[$date_keys[$j]]]->printSelf($basedir,$pdfdir,"main",NULL);
       }
     }
     break;
@@ -1204,16 +1235,16 @@ function makePage($filename,$mode){
     $alltypes = array_unique($alltypes);
     foreach($basetypes as $curtype){
       if(in_array($curtype,$alltypes)){
-	$tmparr = array($curtype=>$DOctr);
-	$DOctr = $DOctr + 1;
-	$docOrder = array_merge($docOrder,$tmparr);
+	      $tmparr = array($curtype=>$DOctr);
+	      $DOctr = $DOctr + 1;
+	      $docOrder = array_merge($docOrder,$tmparr);
       }
     }
     foreach($alltypes as $curtype){
       if(!in_array($curtype,$basetypes)){
-	$tmparr = array($curtype=>$DOctr);
-	$DOctr = $DOctr + 1;
-	$docOrder = array_merge($docOrder,$tmparr);
+	      $tmparr = array($curtype=>$DOctr);
+	      $DOctr = $DOctr + 1;
+	      $docOrder = array_merge($docOrder,$tmparr);
       }
     }
     
@@ -1222,12 +1253,12 @@ function makePage($filename,$mode){
     $lu = array();
     for($i=0;$i<count($doKeys);$i++){
       if(array_key_exists($doKeys[$i],$ini_vars['type_mappings'])){
-	$lu[] = $doKeys[$i];
-	$fooarr = explode("|",$ini_vars['type_mappings'][$doKeys[$i]]);
-	$ln[] = $fooarr[0];
+      	$lu[] = $doKeys[$i];
+	      $fooarr = explode("|",$ini_vars['type_mappings'][$doKeys[$i]]);
+	      $ln[] = $fooarr[0];
       }else{
-	$lu[] = $doKeys[$i];
-	$ln[] = $doKeys[$i];
+	      $lu[] = $doKeys[$i];
+	      $ln[] = $doKeys[$i];
       }
     }
     printLinks($ln,$lu);
@@ -1236,11 +1267,11 @@ function makePage($filename,$mode){
     $vals2sort2 = array();
     if(count($docOrder) > 0){
       for($i=0;$i<$Nrefs;$i++){
-	$vals2sort[] = $docOrder[$newRefs[$i]->type];
+	      $vals2sort[] = $docOrder[$newRefs[$i]->type];
       }
     }else{
       for($i=0;$i<$Nrefs;$i++){
-	$vals2sort[] = 0;
+	      $vals2sort[] = 0;
       }
     }
     $vals2sort2 = $vals2sort;
@@ -1251,35 +1282,36 @@ function makePage($filename,$mode){
     $keys = array_keys($unique_auth);
     for($i=1;$i<=count($keys);$i++){
       if($i == 1)
-	$start = 0;
+	      $start = 0;
       else
-	$start = $keys[$i-1];
+	      $start = $keys[$i-1];
       if($i == count($keys))
-	$end = count($vals2sort);
+	      $end = count($vals2sort);
       else
-	$end = $keys[$i];
+	      $end = $keys[$i];
       $tmparr = array_slice($raw_keys,$start,$end-$start);
       $datearr = array();
       for($j=0;$j<count($tmparr);$j++){
-	$datearr[] = $newRefs[$tmparr[$j]]->dateNum;
+	      $datearr[] = $newRefs[$tmparr[$j]]->dateNum;
       }
       arsort($datearr);
       $date_keys = array_keys($datearr);
       for($j=0;$j<count($tmparr);$j++){
-	if($j == 0){
-	  $tmpval = $newRefs[$tmparr[$date_keys[$j]]]->type;
-	  $name = $tmpval;
-	  if(array_key_exists($tmpval,$ini_vars['type_mappings'])){
-	    $tagarr = explode('|',$ini_vars['type_mappings'][$tmpval]);
-	    $name = $tagarr[0];
-	  }
-	  printDivider($name,$tmpval,$i==1);
-	} 
-	$newRefs[$tmparr[$date_keys[$j]]]->printSelf($basedir,$pdfdir,"main",NULL);
+	      if($j == 0){
+	        $tmpval = $newRefs[$tmparr[$date_keys[$j]]]->type;
+	        $name = $tmpval;
+	        if(array_key_exists($tmpval,$ini_vars['type_mappings'])){
+	          $tagarr = explode('|',$ini_vars['type_mappings'][$tmpval]);
+	          $name = $tagarr[0];
+	        }
+	        printDivider($name,$tmpval,$i==1);
+	      } 
+	      $newRefs[$tmparr[$date_keys[$j]]]->printSelf($basedir,$pdfdir,"main",NULL);
       }
     }
     break;
   case "topic":
+    /*
     for($i=0;$i<$Nrefs;$i++){
       $vals2sort[] = $newRefs[$i]->topic;
     }
@@ -1296,32 +1328,32 @@ function makePage($filename,$mode){
       $tmpval = trim($vals2sort[$keys[$i]],",");
       $foo = explode(" - ",$tmpval);
       if(count($foo) < 2){
-	$foo[] = "";
+	      $foo[] = "";
       } 
       if(strcmp($topic,$foo[0]) != 0){
-	$topic = $foo[0];
-	if($i == 0){
-	  if(strcmp($foo[0],"no topic") != 0){
-	    echo("<td valign=top><table cellpadding=\"0%\" cellspacing=\"0%\"border=0 width=\"100%\"><tr><th colspan=2 align=left><a href=\"#$foo[0]\">$foo[0]</a></th></tr>");
+	  $topic = $foo[0];
+	  if($i == 0){
+	    if(strcmp($foo[0],"no topic") != 0){
+	      echo("<td valign=top><table cellpadding=\"0%\" cellspacing=\"0%\"border=0 width=\"100%\"><tr><th colspan=2 align=left><a href=\"#$foo[0]\">$foo[0]</a></th></tr>");
+	    }
+	  }else{
+	    if(strcmp($foo[0],"no topic") != 0){
+	      echo("</td></table><td valign=top><table cellpadding=\"0%\" cellspacing=\"0%\"border=0 width=\"100%\"><tr><th colspan=2 align=left><a href=\"#$foo[0]\">$foo[0]</a></th></tr>");
+	    }
 	  }
-	}else{
 	  if(strcmp($foo[0],"no topic") != 0){
-	    echo("</td></table><td valign=top><table cellpadding=\"0%\" cellspacing=\"0%\"border=0 width=\"100%\"><tr><th colspan=2 align=left><a href=\"#$foo[0]\">$foo[0]</a></th></tr>");
+	    echo('<tr><td width=\"20\"></td><td><a href="#');
+	    echo("$tmpval");
+	    echo('"');
+	    echo("><font size=-2><b>$foo[1]</b></font></a></td></tr>\n");
 	  }
-	}
-	if(strcmp($foo[0],"no topic") != 0){
-	  echo('<tr><td width=\"20\"></td><td><a href="#');
-	  echo("$tmpval");
-	  echo('"');
-	  echo("><font size=-2><b>$foo[1]</b></font></a></td></tr>\n");
-	}
-      }else{
-	if(strcmp($foo[0],"no topic") != 0){
+    }else{
+	    if(strcmp($foo[0],"no topic") != 0){
 	  echo('<tr><td width=\"20\"></td><td><a href="#');
 	  echo("$tmpval");
 	  echo('"');
 	  echo("><font size=-2><b>$foo[1]<b></font></a></td></tr>\n");
-	}
+	  }
       }
     }
     echo("</table></tr></table><p>\n");
@@ -1329,19 +1361,19 @@ function makePage($filename,$mode){
     $topic = '';
     for($i=1;$i<count($keys);$i++){
       if($i == count($keys)){
-	$end = count($vals2sort);
+	    $end = count($vals2sort);
       }else{
-	$end = $keys[$i];
+	  $end = $keys[$i];
       }
       $tmparr = array_slice($raw_keys,$start,$end-$start);
       $datearr = array();
       for($j=0;$j<count($tmparr);$j++){
-	$datearr[] = $newRefs[$tmparr[$j]]->dateNum;
+	  $datearr[] = $newRefs[$tmparr[$j]]->dateNum;
       }
       arsort($datearr);
       $date_keys = array_keys($datearr);
       for($j=0;$j<count($tmparr);$j++){
-	if($j == 0){
+	  if($j == 0){
 	  $tmpauth = $newRefs[$tmparr[$date_keys[$j]]]->topic;
 	  $topics = explode(" - ",$tmpauth);
 	  if(count($topics) < 2){
@@ -1463,16 +1495,19 @@ function makePage($filename,$mode){
 	    echo('</font></b></td><td width="10%" align="right"><a href="#top">'."\n");
 	    echo("<font size=-1 color=$bartextcolor>top</font></a>&nbsp;&nbsp;</td></tr></table>");
 	  }
-	}
+    }
+
 	$newRefs[$tmparr[$date_keys[$j]]]->printSelf($basedir,$pdfdir,"main",NULL);
       }
       $start = $keys[$i];
     }
     break;
+  */
   }
+  echo("*** flag 7 ***");
 
   if(strcmp($mode,"cache") === 0){
-    /* TODO: problem with cached, so commenting out for now
+    echo("*** flag 8 ***");
     $content = ob_get_contents();
     ob_end_flush();  // send to display before writing to file
                      //   This doesn't seem to make it any faster. Why?
@@ -1480,8 +1515,9 @@ function makePage($filename,$mode){
     $fp = fopen($tmpstr,"w");
     fwrite($fp,$content);
     fclose($fp);
-    */
   }
+  echo("*** flag 9 ***");
+
 }
 
 ?>
