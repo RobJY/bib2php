@@ -957,20 +957,14 @@ function makePage($filename,$mode){
   $Nrefs = count($allRefs); 
   
   // remove refs based on aux file and checkboxes
-  /* TODO: remove for testing; we lose all the references in here */
   $alltypes = array();
   $newRefs = array();
   $newLoc = array();
   for($i=0;$i<$Nrefs;$i++){
     $pullFlag = 0;
-    /* TODO: fix omit and other reference parsing issues
-             they're all getting set to omit = true
-    echo("omit: " . $allRefs[$i]->omit. "<br>");
-    if(strcmp($allRefs[$i]->omit,"true") == 0){
-      echo("pullflag 1<br>");
+    if(!is_null($allRefs[$i]->omit) && strcmp($allRefs[$i]->omit,"true") == 0){
       $pullFlag = 1;
     }
-    */
     if($pullFlag == 0 && in_array("SUPER",$excludeArr)){
       $tmparr = explode("|",$superseded);
       if(in_array($allRefs[$i]->loc,$tmparr)){
