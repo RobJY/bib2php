@@ -227,7 +227,7 @@ class Ref {
 	    $journalURL = $journalURLs[array_search($tmpt,$journalNames)];
 	  else
 	    $journalURL = "";
-	  if(strlen($journalURL) > 0)
+	  if(!is_null($journalURL) && strlen($journalURL) > 0)
 	    $outstr .= " <a href=$journalURL><i>$tmpt</i></a>, ";
 	  else
 	    $outstr .= " <i>$tmpt</i>, ";
@@ -236,16 +236,16 @@ class Ref {
 	  $outstr .= " <i>$tmpt</i>, ";
 	}
 	if(strcmp($mode,"popup") !== 0){
-	  if(strlen($this->volume) > 0){
+	  if(!is_null($this->volume) && strlen($this->volume) > 0){
 	    //echo "vol.$this->volume";
 	    $outstr .= "vol.$this->volume";
 	  }
-	  if(strlen($this->number) > 0){
+	  if(!is_null($this->number) && strlen($this->number) > 0){
 	    $this->number = trim($this->number);
 	    //echo "($this->number),";
 	    $outstr .= "($this->number),";
 	  }
-	  if(strlen($this->pages) > 0){
+	  if(!is_null($this->pages) && strlen($this->pages) > 0){
 	    //echo " pp. $this->pages,";
 	    $outstr .= " pp. $this->pages,";
 	  }
@@ -272,15 +272,15 @@ class Ref {
 	  $outstr .= " <i>$tmpt</i>, ";
 	}
 	if(strcmp($mode,"popup") !== 0){
-	  if(strlen($this->volume) > 0){
+	  if(!is_null($this->volume) && strlen($this->volume) > 0){
 	    //echo "vol.$this->volume";
 	    $outstr .= "vol.$this->volume";
 	  }
-	  if(strlen($this->number) > 0){
+	  if(!is_null($this->number) && strlen($this->number) > 0){
 	    //echo "($this->number),";
 	    $outstr .= "($this->number),";
 	  }
-	  if(strlen($this->pages) > 0){
+	  if(!is_null($this->pages) && strlen($this->pages) > 0){
 	    //echo " pp. $this->pages,";
 	    $outstr .= " pp. $this->pages,";
 	  }
@@ -296,15 +296,15 @@ class Ref {
 	//echo "\n <i>$tmpt</i>, ";
 	$outstr .= " <i>$tmpt</i>, ";
 	if(strcmp($mode,"popup") !== 0){
-	  if(strlen($this->volume) > 0){
+	  if(!is_null($this->volume) && strlen($this->volume) > 0){
 	    //echo "vol.$this->volume";
 	    $outstr .= "vol.$this->volume";
 	  }
-	  if(strlen($this->number) > 0){
+	  if(!is_null($this->number) && strlen($this->number) > 0){
 	    //echo "($this->number),";
 	    $outstr .= "($this->number),";
 	  }
-	  if(strlen($this->pages) > 0){
+	  if(!is_null($this->pages) && strlen($this->pages) > 0){
 	    //echo " pp. $this->pages,";
 	    $outstr .= " pp. $this->pages,";
 	  }
@@ -320,7 +320,7 @@ class Ref {
 	//echo "\n <i>$tmpt</i>,";
 	$outstr .= " <i>$tmpt</i>,";
 	if(strcmp($mode,"popup") !== 0){
-	  if(strlen($this->pages) > 0){
+	  if(!is_null($this->pages) && strlen($this->pages) > 0){
 	    //echo " pages $this->pages.";
 	    $outstr .= " pages $this->pages. $this->publisher,";
 	  }
@@ -337,7 +337,7 @@ class Ref {
       case "PHDTHESIS":
 	//echo "PhD thesis, $this->school,<br>";
 	$outstr .= "PhD thesis, $this->school,<br>";
-	if(strlen($this->address) > 0){
+	if(!is_null($this->address) && strlen($this->address) > 0){
 	  //echo "$this->address, ";
 	  $outstr .= "$this->address, ";
 	}
@@ -347,7 +347,7 @@ class Ref {
       case "MASTERSTHESIS":
 	//echo "MS thesis, $this->school,<br>";
 	$outstr .= "MS thesis, $this->school,<br>";
-	if(strlen($this->address) > 0){
+	if(!is_null($this->address) && strlen($this->address) > 0){
 	  //echo "$this->address, ";
 	  $outstr .= "$this->address, ";
 	}
@@ -386,11 +386,11 @@ class Ref {
       $outstr .= " $this->status<br>";
       
       if(strcmp($mode,"abstract") === 0){
-	if(strlen($this->copy) > 0)
+	if(!is_null($this->copy) && strlen($this->copy) > 0)
 	  $outstr .= "&copy; <i>$this->copy</i><br>";
       }
       
-      if(strlen($this->other) > 0){
+      if(!is_null($this->other) && strlen($this->other) > 0){
 	if(strcmp($mode,"abstract") === 0)
 	  $outstr .= "<P>";
 	$outstr .= stripslashes("$this->other<br>");
@@ -399,7 +399,7 @@ class Ref {
       if(strcmp($mode,"main") === 0){
 	
 	// if $this->pdf is empty check default directory
-	if(strlen($this->pdf_url) == 0){
+	if(!is_null($this->pdf_url) && strlen($this->pdf_url) == 0){
 	  $tmpurl = $pdfdir . strtolower($this->loc) . ".pdf";
 	  clearstatcache();
 	  if(file_exists($tmpurl) !== false){
@@ -417,7 +417,7 @@ class Ref {
 	  $outstr .= "$this->loc";
 	  //echo "\">Abstract</a>";
 	  $outstr .= "\">Abstract</a>";
-	  if(strlen($this->pdf_url) > 0){
+	  if(!is_null($this->pdf_url) && strlen($this->pdf_url) > 0){
 	    //echo "&nbsp;|&nbsp;<a href=\"";
 	    $outstr .= "&nbsp;|&nbsp;<a href=\"";
 	    //echo "$this->pdf_url";
@@ -425,7 +425,7 @@ class Ref {
 	    //echo "\">PDF</a>";
 	    $outstr .= "\">PDF</a>";
 	  }
-	  if(strlen($this->ps_url) > 0){
+	  if(!is_null($this->ps_url) && strlen($this->ps_url) > 0){
 	    //echo "&nbsp;|&nbsp;<a href=\"";
 	    $outstr .= "&nbsp;|&nbsp;<a href=\"";
 	    //echo "$this->ps_url";
@@ -458,7 +458,7 @@ function LcF2FsL($instr){
 }
 
 function loadStruct($line,$fp,&$EOEflag,&$tmpRef,$map,$targLoc,&$supersedeLoc){
-  if(strlen($line) > 0 && strpos($line,'=') !== false && $line[0] !== 'x' && 
+  if(!is_null($line) && strlen($line) > 0 && strpos($line,'=') !== false && $line[0] !== 'x' && 
      $line[0] !== '*' && $line[0] !== '%'){
 
     // get tag
@@ -573,7 +573,7 @@ function loadStruct($line,$fp,&$EOEflag,&$tmpRef,$map,$targLoc,&$supersedeLoc){
 	// is targLoc in $tmpRef->super (pipe sep. string)
 	//if(strlen($targLoc) > 0 && strpos($tmpRef->super,$targLoc) !== false){
 	$tmpSuper = explode("|",$tmpRef->super);
-	if(strlen($targLoc) > 0 && in_array($targLoc,$tmpSuper)){
+	if(!is_null($targLoc) && strlen($targLoc) > 0 && in_array($targLoc,$tmpSuper)){
 	  $supersedeLoc[] = $tmpRef->loc;
 	}	
       }     
@@ -801,24 +801,20 @@ function bibtex2array(&$allRefs,&$allLoc,$bibfile,$ini_vars,$targLoc){
       
       $locStart = strpos($line,"{");
       $locEnd = strpos($line,",");
-      echo("$line<br>");
       $tmpRef->loc = substr($line,$locStart+1,$locEnd-($locStart+1));
-      echo("** loc **");
-      echo($tmpRef->loc);
       $tmpRef->bibtex .= $line."<br>";
-      echo($tmpRef->bibtex);      
       $line=trim(fgets($fp));
       $EOEflag = 0;
       // while not at the end of the article
       while(strpos($line,"}") !== 0 && $EOEflag == 0){
 	// don't display x'ed, *'ed items or empty lines in bibtex
-	if(strlen($line) > 0 && $line[0] !== 'x' && $line[0] !== '*')
+	if(!is_null($line) && strlen($line) > 0 && $line[0] !== 'x' && $line[0] !== '*')
 	  $tmpRef->bibtex .= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".$line."<br>";
 	loadStruct($line,$fp,$EOEflag,$tmpRef,NULL,NULL,$supersedeLoc);
 	$line=trim(fgets($fp));
       }
       // set $tmpRef->month if no MONTH tag in bibtex file
-      if(strlen($tmpRef->month) == 0){
+      if(!is_null($tmpRef->month) && strlen($tmpRef->month) == 0){
 	$tmpRef->monthNum = 13;
       }
       // add all references now
@@ -831,14 +827,6 @@ function bibtex2array(&$allRefs,&$allLoc,$bibfile,$ini_vars,$targLoc){
   $Nrefs = count($allRefs);
   fclose($fp);
   
-  for($i=0;$i<$Nrefs;$i++){
-    echo($allRefs[$i]->loc);
-    echo("<br>");
-  }
-
-
-
-
   return $Nrefs;
 }
 
@@ -967,7 +955,6 @@ function makePage($filename,$mode){
     }
   }
   $Nrefs = count($allRefs); 
-  echo("flag 1: $Nrefs <br>");
   
   // remove refs based on aux file and checkboxes
   /* TODO: remove for testing; we lose all the references in here */
@@ -987,33 +974,25 @@ function makePage($filename,$mode){
     if($pullFlag == 0 && in_array("SUPER",$excludeArr)){
       $tmparr = explode("|",$superseded);
       if(in_array($allRefs[$i]->loc,$tmparr)){
-        echo("pullflag 2<br>");
 	      $pullFlag = 1;
       }
     }
     if($pullFlag == 0 && in_array($allRefs[$i]->type,$excludeArr)){
-      echo("pullflag 3<br>");
       $pullFlag = 1;
     }
-    echo("pullFlag: $pullFlag <br>");
+
     if($pullFlag == 0){
       $alltypes[] = $allRefs[$i]->type;
       $newRefs[] = $allRefs[$i];
       $newLoc[] = $allLoc[$i];
     }
   }
-  // TODO: nothing is matching above, so we're losing all the refs
-  echo("flag 1.0: " . count($alltypes) . " : " . count($newRefs) . " : " . count($allLoc) . "<br>");
-  echo("flag 1.1: $Nrefs" . "<br>");
-  
+
   $allRefs = array();
   $allRefs = $newRefs;
   $allLoc = array();
   $allLoc = $newLoc;
   $Nrefs = count($allRefs); 
-  echo("flag2: $Nrefs");
-  echo("flag 2.0: " . count($alltypes) . " : " . count($newRefs) . " : " . count($allLoc) . "<br>");
-  echo("flag 2.1: $Nrefs" . "<br>");  /* end remove for testing */
 
   // add references with multiple topics if sorting method is by topic
   if(strcmp($smethod,"topic") == 0){
@@ -1118,7 +1097,6 @@ function makePage($filename,$mode){
 
   echo("</td></tr>");
   echo("<tr><td valign=top>Exclude:&nbsp;&nbsp;</td><td>");
-  echo("*** flag 1 ***");
 
   $types = array_keys($ini_vars['type_mappings']);
   // pull exgroup types out of $types array.
@@ -1139,7 +1117,6 @@ function makePage($filename,$mode){
       echo $title . "</nobr>&nbsp;&nbsp;&nbsp;&nbsp;\n";
     }
   }
-  echo("*** flag 2 ***");
   // now make exgroup checkbox
   //   decide if checked
   if(count($exgroup) > 1){
@@ -1148,7 +1125,6 @@ function makePage($filename,$mode){
       if(!in_array($value,$excludeArr))
       	$cond = 0;
     }
-    echo("*** flag 3 ***");
     
     $checked = "";
     if($cond)
@@ -1156,11 +1132,9 @@ function makePage($filename,$mode){
     echo("<nobr><input type=\"checkbox\" name=\"EXGROUP\" onClick=\"sortm.submit();\" $checked>\n");
     echo $exgroupTitle . "</nobr>&nbsp;&nbsp;&nbsp;&nbsp;\n";
   }
-  echo("*** flag 4 ***");
 
   echo("</td></tr></table>");
   echo('</form><p>'."\n");
-  echo("*** flag 5 ***");
   
   // compute sorted index list based on method and print
   $vals2sort = array();
@@ -1168,8 +1142,6 @@ function makePage($filename,$mode){
   case "date": default:
     $allyears = array();
     for($i=0;$i<$Nrefs;$i++){
-      // TODO: year is also parsed wrong
-      echo($newRefs[$i]->year);
       $allyears[] = trim($newRefs[$i]->year);
     }
     $uallyears = array_unique($allyears);
