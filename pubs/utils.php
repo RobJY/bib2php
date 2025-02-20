@@ -592,9 +592,53 @@ function loadStruct($line,$fp,&$EOEflag,&$tmpRef,$map,$targLoc,&$supersedeLoc){
       break;
     default:
       $taglow = strtolower($tag);
+      echo("tag: $tag   taglow: $taglow <br>");
       //echo "<P>$line<P>";
+      /*
       $evalstr = '$tmpRef->' . $taglow . ' = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));';
+      echo($taglow . "<br>" . $evalstr . "<br>");
       eval($evalstr);
+      */
+      /* TODO: need to add other fields */
+      if (strcmp($taglow, "title") == 0) {
+        $tmpRef->title = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "journal") == 0) {
+        $tmpRef->journal = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "year") == 0) {
+        $tmpRef->year = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "doi") == 0) {
+        $tmpRef->doi = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex)); 
+      } elseif (strcmp($taglow, "volume") == 0) {
+        $tmpRef->volume = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "number") == 0) {
+        $tmpRef->number = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "pages") == 0) {
+        $tmpRef->pages = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "pdf_url") == 0) {
+        $tmpRef->pdf_url = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "official_url") == 0) {
+        $tmpRef->official_url = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "abstract_url") == 0) {
+        $tmpRef->abstract_url = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "pdf2_url") == 0) {
+        $tmpRef->pdf2_url = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "pmid") == 0) {
+        $tmpRef->pmid = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "pmcid") == 0) {
+        $tmpRef->pmcid = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "issue") == 0) {
+        $tmpRef->issue = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "month") == 0) {
+        $tmpRef->month = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "booktitle") == 0) {
+        $tmpRef->booktitle = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "copy") == 0) {
+        $tmpRef->copy = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "omit") == 0) {
+        $tmpRef->omit = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "publisher") == 0) {
+        $tmpRef->publisher = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      }
     }
   }
 }
@@ -1012,7 +1056,7 @@ function makePage($filename,$mode){
   // sort object array by date. Most recent given the smallest index value.
   // calculate dateNum for all objects first.
   for($i=0;$i<$Nrefs;$i++){
-    $allRefs[$i]->dateNum = $allRefs[$i]->year+($allRefs[$i]->monthNum*0.01);
+    $allRefs[$i]->dateNum = (float) $allRefs[$i]->year + ($allRefs[$i]->monthNum*0.01);
   }
   
   // now make new array and sort objects by date
@@ -1136,7 +1180,10 @@ function makePage($filename,$mode){
   case "date": default:
     $allyears = array();
     for($i=0;$i<$Nrefs;$i++){
-      $allyears[] = trim($newRefs[$i]->year);
+      if (!is_null($newRefs[$i]->year)) {
+        $allyears[] = trim($newRefs[$i]->year);
+   
+      }
     }
     $uallyears = array_unique($allyears);
     printLinks($uallyears,$uallyears);
@@ -1148,7 +1195,6 @@ function makePage($filename,$mode){
       }
       $newRefs[$i]->printSelf($basedir,$pdfdir,"main",NULL);
     }
-    echo("*** flag 6 ***");
     break;
   case "author":
     for($i=0;$i<$Nrefs;$i++){
@@ -1470,10 +1516,8 @@ function makePage($filename,$mode){
     break;
   */
   }
-  echo("*** flag 7 ***");
 
   if(strcmp($mode,"cache") === 0){
-    echo("*** flag 8 ***");
     $content = ob_get_contents();
     ob_end_flush();  // send to display before writing to file
                      //   This doesn't seem to make it any faster. Why?
@@ -1482,7 +1526,6 @@ function makePage($filename,$mode){
     fwrite($fp,$content);
     fclose($fp);
   }
-  echo("*** flag 9 ***");
 
 }
 
