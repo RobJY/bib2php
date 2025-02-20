@@ -85,7 +85,7 @@ if(file_exists($abfilename)){
     }
     fclose($fp);
   }
-}elseif(strlen($tmpRef->abstract) > 0){
+}elseif(!is_null($tmpRef->abstract)){
   $abstract = $tmpRef->abstract;
 }else{
   $abstract = "Abstract currently unavailable.";
@@ -101,7 +101,7 @@ if(file_exists($authfile)){
 /////////////////////////////////////////////////
 $tmpstr = cleanStr($tmpRef->title,1);
 echo "<html><head><title>Abstract: $tmpstr</title>";
-if(strcmp($tmpRef->keywords,"") != 0){
+if(!is_null($tmpRef->keywords)){
   echo '<META name="keywords" content="';
   echo "$tmpRef->keywords";
   echo '">';
@@ -114,7 +114,7 @@ echo "<link rel=\"stylesheet\" href=\"../utils/pubs.css\" type=\"text/css\">\n";
 echo "</head>";
 echo "<body bgcolor=\"#FFFFFF\" text=\"#000000\">";
 echo "<script type='text/javascript' src='../utils/wz_tooltip.js'></script>";
-if(strlen($tmpRef->cover_url) > 0){
+if(!is_null($tmpRef->cover_url)){
   echo "<table border=0 width=100%><tr><td width=70%>";
 }else{
   echo "<table border=0 width=100%><tr><td width=100%>";
@@ -130,7 +130,7 @@ $tmpRef->printSelf($basedir,$pdfdir,"abstract",$authorURLarray);
 //  echo "<br>$tmpRef->other<p>";
 //}
 
-if(strcmp($tmpRef->doi,"") != 0){
+if(!is_null($tmpRef->doi)){
   echo "<p>DOI: <a href=\"http://dx.doi.org/$tmpRef->doi\">$tmpRef->doi</a><br>";
 }
 
@@ -212,7 +212,7 @@ document.write("</font></div>");
 
 <?php
 
-if(strcmp($tmpRef->pdf_url,"") != 0){
+if(!is_null($tmpRef->pdf_url)){
   echo "<br>Download:";
   echo "<li><a href=$tmpRef->pdf_url>Reprint (pdf)</a>";
 }else{
@@ -221,19 +221,19 @@ if(strcmp($tmpRef->pdf_url,"") != 0){
     echo "<li><a href=$tmpurl>Reprint (pdf)</a>";
   }
 }
-if(strlen($tmpRef->official_url) > 0){
+if(!is_null($tmpRef->official_url)){
   echo "<li><a href=$tmpRef->official_url>Official (pdf)</a>";
 }
-if(strcmp($tmpRef->ps_url,"") != 0){
+if(!is_null($tmpRef->ps_url)){
   echo "<li><a href=$tmpRef->ps_url>Reprint (ps)</a>";
 }
-if(count($tmpRef->dlTitle) > 0){
+if(!is_null($tmpRef->dlTitle)){
   for($i=0;$i<count($tmpRef->dlTitlearr);$i++){
     printf("<li><a href=%s>%s</a>",$tmpRef->dlURLarr[$i],$tmpRef->dlTitlearr[$i]);
   }
  }
 
-if(count($tmpRef->cover_url) > 0){
+if(!is_null($tmpRef->cover_url)){
   echo "</td><td width=30% align=center><a href=$tmpRef->cover_url><img src=$tmpRef->cover_pic></a></td></table>";
 }else{
   echo "</td><td></td></table>";
@@ -244,7 +244,7 @@ echo "<hr size=1 noshade>";
 
 //echo "Related:";
 // list superseded documents first if there are any
-if(strcmp($tmpRef->super,"") != 0){
+if(!is_null($tmpRef->super)){
   echo "<li>Superseded Publications: ";
   $superArray = explode("|",$tmpRef->super);
   for($i=0;$i<count($superArray);$i++){

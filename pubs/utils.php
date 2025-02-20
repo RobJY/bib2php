@@ -54,6 +54,8 @@ class Ref {
   var $title;
   var $volume;
   var $year;
+  var $pmcid;
+  var $pmid;
 
   function printSelf($basedir,$pdfdir,$mode,$authorURLarray){
     // if mode is abstract make publication URL arrays
@@ -592,14 +594,13 @@ function loadStruct($line,$fp,&$EOEflag,&$tmpRef,$map,$targLoc,&$supersedeLoc){
       break;
     default:
       $taglow = strtolower($tag);
-      echo("tag: $tag   taglow: $taglow <br>");
+      //echo("tag: $tag   taglow: $taglow <br>");
       //echo "<P>$line<P>";
       /*
       $evalstr = '$tmpRef->' . $taglow . ' = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));';
       echo($taglow . "<br>" . $evalstr . "<br>");
       eval($evalstr);
       */
-      /* TODO: need to add other fields */
       if (strcmp($taglow, "title") == 0) {
         $tmpRef->title = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
       } elseif (strcmp($taglow, "journal") == 0) {
@@ -638,6 +639,30 @@ function loadStruct($line,$fp,&$EOEflag,&$tmpRef,$map,$targLoc,&$supersedeLoc){
         $tmpRef->omit = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
       } elseif (strcmp($taglow, "publisher") == 0) {
         $tmpRef->publisher = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "other") == 0) {
+        $tmpRef->other = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "status") == 0) {
+        $tmpRef->status = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "cover_pic") == 0) {
+        $tmpRef->cover_pic = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "cover_url") == 0) {
+        $tmpRef->cover_url = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "supersede") == 0) {
+        $tmpRef->supersede = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "keywords") == 0) {
+        $tmpRef->keywords = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "related") == 0) {
+        $tmpRef->related = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "institution") == 0) {
+        $tmpRef->institution = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "ps_url") == 0) {
+        $tmpRef->ps_url = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "ps_url") == 0) {
+        $tmpRef->ps2_url = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));        
+      } elseif (strcmp($taglow, "note") == 0) {
+        $tmpRef->note = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
+      } elseif (strcmp($taglow, "booktitle") == 0) {
+        $tmpRef->booktitle = addslashes(read_entry($line,$fp,$EOEflag,$tmpRef->bibtex));
       }
     }
   }
