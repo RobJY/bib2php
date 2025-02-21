@@ -56,6 +56,10 @@ class Ref {
   var $year;
   var $pmcid;
   var $pmid;
+  var $issue;
+  var $abstract_url;
+  var $pdf2_url;
+  var $supersede;
 
   function printSelf($basedir,$pdfdir,$mode,$authorURLarray){
     // if mode is abstract make publication URL arrays
