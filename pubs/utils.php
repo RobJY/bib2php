@@ -1438,7 +1438,7 @@ function makePage($filename,$mode){
 	    case "Perceptual Image Metrics":
 	      echo("<b><font size=+1 color=$bartextcolor>\n");
 	      echo("&nbsp;&nbsp;$topics[1]\n");
-	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~zwang/files/research/ssim name=\"\n");
+	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~zwang/files/research/ssim name=\"\n");
 	      echo("$tmpauth");
 	      echo('>"');
 	      echo("</b>[ Topic Page ]<b></a>\n");
@@ -1446,7 +1446,7 @@ function makePage($filename,$mode){
 	    case "Texture Analysis/Representation/Synthesis":
 	      echo("<b><font size=+1 color=$bartextcolor>");
 	      echo("&nbsp;&nbsp;$topics[1]</a>\n");
-	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~lcv/texture name=\"");
+	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~lcv/texture name=\"");
 	      echo("$tmpauth");
 	      echo('">');
 	      echo("</b>[ Topic Page ]<b></a>\n");
@@ -1454,7 +1454,7 @@ function makePage($filename,$mode){
 	    case "Compression":
 	      echo("<b><font size=+1 color=$bartextcolor>");
 	      echo("&nbsp;&nbsp;$topics[1]</a>\n");
-	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~eero/EPWIC name=\"");
+	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~eero/EPWIC name=\"");
 	      echo("$tmpauth");
 	      echo('">');
 	      echo("</b>[ Topic Page ]<b></a>\n");
@@ -1462,7 +1462,7 @@ function makePage($filename,$mode){
 	    case "Modeling Physiology":
 	      echo("<b><font size=+1 color=$bartextcolor>");
 	      echo("&nbsp;&nbsp;$topics[1]</a>\n");
-	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~eero/MT-model.html name=\"");
+	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~eero/MT-model.html name=\"");
 	      echo("$tmpauth");
 	      echo('">');
 	      echo("</b>[ Topic Page ]<b></a>\n");
@@ -1470,7 +1470,7 @@ function makePage($filename,$mode){
 	    case "Multi-Scale, Oriented Representations (Steerable Pyramids)":
 	      echo("<b><font size=+1 color=$bartextcolor>");
 	      echo("&nbsp;&nbsp;$topics[1]</a>\n");
-	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~eero/STEERPYR name=\"");
+	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~eero/STEERPYR name=\"");
 	      echo("$tmpauth");
 	      echo('">');
 	      echo("</b>[ Topic Page ]<b></a>\n");
@@ -1489,7 +1489,7 @@ function makePage($filename,$mode){
 	    case "Perceptual Image Metrics":
 	      echo("<b><font size=+1 color=$bartextcolor>");
 	      echo("&nbsp;&nbsp;$topics[1]\n");
-	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~zwang/files/research/ssim name=\"");
+	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~zwang/files/research/ssim name=\"");
 	      echo("$tmpauth");
 	      echo('">');
 	      echo("</b>[ Topic Page ]<b></a>\n");
@@ -1497,7 +1497,7 @@ function makePage($filename,$mode){
 	    case "Texture Analysis/Representation/Synthesis":
 	      echo("<b><font size=+1 color=$bartextcolor>");
 	      echo("&nbsp;&nbsp;$topics[1]</a>\n");
-	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~lcv/texture name=\"");
+	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~lcv/texture name=\"");
 	      echo("$tmpauth");
 	      echo('">');
 	      echo("</b>[ Topic Page ]<b></a>\n");
@@ -1505,7 +1505,7 @@ function makePage($filename,$mode){
 	    case "Compression":
 	      echo("<b><font size=+1 color=$bartextcolor>");
 	      echo("&nbsp;&nbsp;$topics[1]</a>\n");
-	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~eero/EPWIC name=\"");
+	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~eero/EPWIC name=\"");
 	      echo("$tmpauth");
 	      echo('">');
 	      echo("</b>[ Topic Page ]<b></a>\n");
@@ -1513,7 +1513,7 @@ function makePage($filename,$mode){
 	    case "Modeling Physiology":
 	      echo("<b><font size=+1 color=$bartextcolor>");
 	      echo("&nbsp;&nbsp;$topics[1]</a>\n");
-	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~eero/MT-model.html name=\"");
+	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~eero/MT-model.html name=\"");
 	      echo("$tmpauth");
 	      echo('">');
 	      echo("</b>[ Topic Page ]<b></a>\n");
@@ -1521,7 +1521,7 @@ function makePage($filename,$mode){
 	    case "Multi-Scale, Oriented Representations (Steerable Pyramids)":
 	      echo("<b><font size=+1 color=$bartextcolor>");
 	      echo("&nbsp;&nbsp;$topics[1]</a>\n");
-	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~eero/STEERPYR name=\"");
+	      echo("&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~eero/STEERPYR name=\"");
 	      echo("$tmpauth");
 	      echo('">');
 	      echo("</b>[ Topic Page ]<b></a>\n");

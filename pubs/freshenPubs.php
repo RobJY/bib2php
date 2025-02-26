@@ -172,7 +172,7 @@ foreach($filenames as $filename){
     $newLoc=array();
     for($i=0;$i<$Nrefs;$i++){
       $pullFlag = 0;
-      if(strcmp($allRefs[$i]->omit,"true") == 0){
+      if(!is_null($allRefs[$i]->omit)){
 	$pullFlag = 1;
       }
       if($pullFlag == 0 && strcmp($rmsuper,"on") == 0){
@@ -216,7 +216,7 @@ foreach($filenames as $filename){
 	  $allRefs[$i]->topic = $topics[0];
 	  for($j=1;$j<count($topics);$j++){ //we already have one, so start i=1
 	    $vals2sort[] = $topics[$j];
-	    $tmpRef =& new Ref();
+	    $tmpRef = new Ref();
 	    $tmpRef = $allRefs[$i];
 	    $tmpRef->topic = $topics[$j];
 	    $allRefs[] = $tmpRef;
@@ -640,7 +640,7 @@ foreach($filenames as $filename){
 	      case "Perceptual Image Metrics":
 		fwrite($fp1,"<b><font size=+1 color=$bartextcolor>\n");
 		fwrite($fp1,"&nbsp;&nbsp;$topics[1]\n");
-		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~zwang/files/research/ssim name=\"\n");
+		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~zwang/files/research/ssim name=\"\n");
 		fwrite($fp1,"$tmpauth");
 		fwrite($fp1,'>"');
 		fwrite($fp1,"</b>[ Topic Page ]<b></a>\n");
@@ -648,7 +648,7 @@ foreach($filenames as $filename){
 	      case "Texture Analysis/Representation/Synthesis":
 		fwrite($fp1,"<b><font size=+1 color=$bartextcolor>");
 		fwrite($fp1,"&nbsp;&nbsp;$topics[1]</a>\n");
-		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~lcv/texture name=\"");
+		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~lcv/texture name=\"");
 		fwrite($fp1,"$tmpauth");
 		fwrite($fp1,'">');
 		fwrite($fp1,"</b>[ Topic Page ]<b></a>\n");
@@ -656,7 +656,7 @@ foreach($filenames as $filename){
 	      case "Compression":
 		fwrite($fp1,"<b><font size=+1 color=$bartextcolor>");
 		fwrite($fp1,"&nbsp;&nbsp;$topics[1]</a>\n");
-		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~eero/EPWIC name=\"");
+		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~eero/EPWIC name=\"");
 		fwrite($fp1,"$tmpauth");
 		fwrite($fp1,'">');
 		fwrite($fp1,"</b>[ Topic Page ]<b></a>\n");
@@ -664,7 +664,7 @@ foreach($filenames as $filename){
 	      case "Modeling Physiology":
 		fwrite($fp1,"<b><font size=+1 color=$bartextcolor>");
 		fwrite($fp1,"&nbsp;&nbsp;$topics[1]</a>\n");
-		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~eero/MT-model.html name=\"");
+		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~eero/MT-model.html name=\"");
 		fwrite($fp1,"$tmpauth");
 		fwrite($fp1,'">');
 		fwrite($fp1,"</b>[ Topic Page ]<b></a>\n");
@@ -672,7 +672,7 @@ foreach($filenames as $filename){
 	      case "Multi-Scale, Oriented Representations (Steerable Pyramids)":
 		fwrite($fp1,"<b><font size=+1 color=$bartextcolor>");
 		fwrite($fp1,"&nbsp;&nbsp;$topics[1]</a>\n");
-		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~eero/STEERPYR name=\"");
+		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~eero/STEERPYR name=\"");
 		fwrite($fp1,"$tmpauth");
 		fwrite($fp1,'">');
 		fwrite($fp1,"</b>[ Topic Page ]<b></a>\n");
@@ -691,7 +691,7 @@ foreach($filenames as $filename){
 	      case "Perceptual Image Metrics":
 		fwrite($fp1,"<b><font size=+1 color=$bartextcolor>");
 		fwrite($fp1,"&nbsp;&nbsp;$topics[1]\n");
-		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~zwang/files/research/ssim name=\"");
+		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~zwang/files/research/ssim name=\"");
 		fwrite($fp1,"$tmpauth");
 		fwrite($fp1,'">');
 		fwrite($fp1,"</b>[ Topic Page ]<b></a>\n");
@@ -699,7 +699,7 @@ foreach($filenames as $filename){
 	      case "Texture Analysis/Representation/Synthesis":
 		fwrite($fp1,"<b><font size=+1 color=$bartextcolor>");
 		fwrite($fp1,"&nbsp;&nbsp;$topics[1]</a>\n");
-		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~lcv/texture name=\"");
+		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~lcv/texture name=\"");
 		fwrite($fp1,"$tmpauth");
 		fwrite($fp1,'">');
 		fwrite($fp1,"</b>[ Topic Page ]<b></a>\n");
@@ -707,7 +707,7 @@ foreach($filenames as $filename){
 	      case "Compression":
 		fwrite($fp1,"<b><font size=+1 color=$bartextcolor>");
 		fwrite($fp1,"&nbsp;&nbsp;$topics[1]</a>\n");
-		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~eero/EPWIC name=\"");
+		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~eero/EPWIC name=\"");
 		fwrite($fp1,"$tmpauth");
 		fwrite($fp1,'">');
 		fwrite($fp1,"</b>[ Topic Page ]<b></a>\n");
@@ -715,7 +715,7 @@ foreach($filenames as $filename){
 	      case "Modeling Physiology":
 		fwrite($fp1,"<b><font size=+1 color=$bartextcolor>");
 		fwrite($fp1,"&nbsp;&nbsp;$topics[1]</a>\n");
-		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~eero/MT-model.html name=\"");
+		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~eero/MT-model.html name=\"");
 		fwrite($fp1,"$tmpauth");
 		fwrite($fp1,'">');
 		fwrite($fp1,"</b>[ Topic Page ]<b></a>\n");
@@ -723,7 +723,7 @@ foreach($filenames as $filename){
 	      case "Multi-Scale, Oriented Representations (Steerable Pyramids)":
 		fwrite($fp1,"<b><font size=+1 color=$bartextcolor>");
 		fwrite($fp1,"&nbsp;&nbsp;$topics[1]</a>\n");
-		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=http://www.cns.nyu.edu/~eero/STEERPYR name=\"");
+		fwrite($fp1,"&nbsp;&nbsp;<a link=$barcolor vlink=\"#AA0000\" href=https://www.cns.nyu.edu/~eero/STEERPYR name=\"");
 		fwrite($fp1,"$tmpauth");
 		fwrite($fp1,'">');
 		fwrite($fp1,"</b>[ Topic Page ]<b></a>\n");

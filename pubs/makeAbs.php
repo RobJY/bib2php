@@ -7,7 +7,7 @@ $maindir = "./";
 
 $targLoc = $_GET['loc'];
 if(strlen($targLoc) == 0){
-  header('Location:http://www.cns.nyu.edu/lcv/publications.php');
+  header('Location:https://www.cns.nyu.edu/lcv/publications.php');
 }
 
 include("utils.php");
@@ -55,8 +55,8 @@ if($targIdx === false){
   echo "<h2>Error retrieving LCV publication abstract: unknown key '$targLoc'.";
   echo "</h2>Please check the link and try again.<p>";
   echo "A full list of LCV publications is available at <a href='";
-  echo "http://www.cns.nyu.edu/~lcv/publications.php'>";
-  echo "http://www.cns.nyu.edu/~lcv/publications.php</a><p>";  
+  echo "https://www.cns.nyu.edu/~lcv/publications.php'>";
+  echo "https://www.cns.nyu.edu/~lcv/publications.php</a><p>";  
   exit(1);
 }else{
   $tmpRef = $allRefs[$targIdx];
@@ -361,7 +361,7 @@ if(count($tmpRef->relatedArr) > 0){
 //  }
 // }
 
-echo "<li><a href=http://www.cns.nyu.edu/~lcv/publications.php>";
+echo "<li><a href=https://www.cns.nyu.edu/~lcv/publications.php>";
 echo "Listing of all publications</a>";
 
 // add coins tag
