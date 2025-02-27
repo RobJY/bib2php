@@ -131,11 +131,13 @@ class Ref {
 	  echo "<meta name=\"citation_journal_title\" content=\"$this->booktitle\">";
 	//if(in_array(stripslashes($tmpRef->booktitle),$journalNames)){
 	//$targ_idx = array_search(stripslashes($tmpRef->booktitle),$journalNames);
-	if(in_array(stripslashes($this->booktitle),$journalNames)){
+	/* TODO: do we still use this?
+  if(in_array(stripslashes($this->booktitle),$journalNames)){
 	  $targ_idx = array_search(stripslashes($this->booktitle),$journalNames);
 	  echo "<meta name=\"citation_conference_title\" content=\"$this->confNames[$targ_idx]\">";
 	}
-	if(!empty($this->volume))
+  */
+  if(!empty($this->volume))
 	  echo "<meta name=\"citation_volume\" content=\"$this->volume\">";
 	if(!empty($this->number))
 	  echo "<meta name=\"citation_issue\" content=\"$this->number\">";
