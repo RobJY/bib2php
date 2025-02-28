@@ -17,7 +17,7 @@ $pdfdir = $ini_vars['bib2php_vars']['PDF'];
 $authfile = $ini_vars['bib2php_vars']['AUTHOR'];
 $journalfile = $ini_vars['bib2php_vars']['JOURNAL'];
 $basedir = $ini_vars['bib2php_vars']['BASE1'];
-$basedir2 = $ini_vars['bib2php_vars']['BASE2'];
+//$basedir2 = $ini_vars['bib2php_vars']['BASE2'];
 if(strpos($ini_vars['bib2php_vars']['EXCLUDE'],"super") !== false){
   $rmsuper = "on";
 }
@@ -159,7 +159,7 @@ foreach($filenames as $filename){
     $superseded = "";
     if(strcmp($rmsuper,"on") == 0){
       for($i=0;$i<$Nrefs;$i++){
-	if(strlen($superseded) == 0){
+	if(!is_null($superseded) && strlen($superseded) == 0){
 	  $superseded = $allRefs[$i]->super;
 	}else{
 	  $superseded = $superseded . "|" . $allRefs[$i]->super;
@@ -210,7 +210,7 @@ foreach($filenames as $filename){
     // add references with multiple topics if sorting method is by topic
     if(strcmp($smethod,"topic") == 0){
       for($i=0;$i<$Nrefs;$i++){
-	if(strpos($allRefs[$i]->topic,"|") != 0){
+	if(!is_null($allRefs[$i]->topic) && strpos($allRefs[$i]->topic,"|") != 0){
 	  $topics = explode("|",$allRefs[$i]->topic);
 	  $vals2sort[] = $topics[0];
 	  $allRefs[$i]->topic = $topics[0];
@@ -271,7 +271,7 @@ foreach($filenames as $filename){
     fwrite($fp1,"<a name=\"top\"> </a>\n");
     $tmpstr = "../utils/lcvheader_dynamic.html";
     fwrite($fp1,file_get_contents($tmpstr));
-    fwrite($fp1,"<?php include(\"" . $basedir2 . "../utils/bib2php-sty.php\"); ?>");
+    /*fwrite($fp1,"<?php include(\"" . $basedir2 . "../utils/bib2php-sty.php\"); ?>");*/
     fwrite($fp1,"<FONT FACE=\"Helvetica,Arial,sans-serif\" SIZE=+2 COLOR=\"#FF0000\"><b>Selected Online Publications</b></FONT>\n");
     fwrite($fp1,"<form name=\"sortm\" action=\"publications.php\" method=\"get\"><br>");
     //$tmpstr = $_SERVER['SCRIPT_NAME'];
