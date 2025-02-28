@@ -21,6 +21,7 @@ $pdfdir = $ini_vars['bib2php_vars']['PDF'];
 $authfile = $ini_vars['bib2php_vars']['AUTHOR'];
 $journalfile = $ini_vars['bib2php_vars']['JOURNAL'];
 $basedir = $ini_vars['bib2php_vars']['BASE1'];
+echo("*** basedir: $basedir <br>");
 if(strpos($ini_vars['bib2php_vars']['EXCLUDE'],"super") !== false){
   $rmsuper = "on";
 }
